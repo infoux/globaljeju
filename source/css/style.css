@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -492,7 +493,7 @@ th {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
-  color: #555;
+  color: #404040;
   border: 1px solid #ccc;
   width: 32px;
   height: 32px;
@@ -593,7 +594,7 @@ textarea {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #404040;
 }
 
 button {
@@ -1373,8 +1374,19 @@ body header {
   text-align: center;
 }
 
+@media (max-width: 1199px) {
+  body header.bg {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.4)));
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+}
+
 body header .container {
-  height: 100px;
+  height: 82px;
 }
 
 @media (min-width: 1200px) {
@@ -1495,27 +1507,59 @@ body header .container div.header-tools div.language div.list {
   position: absolute;
   max-height: 0;
   overflow: hidden;
+  min-width: 120px;
   left: 0;
   top: 40px;
-  background: #fff;
-  border-radius: 10px;
+  background: #4B4B4B;
   -webkit-box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 body header .container div.header-tools div.language div.list a {
   display: block;
+  position: relative;
+  text-align: left;
   height: auto;
-  padding: 5px 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 500;
   opacity: 1;
+  line-height: 50px;
+  color: #E3E3E3;
+  border-bottom: 1px solid #9F9F9F;
 }
 
-body header .container div.header-tools div.language div.list a:first-of-type {
-  padding-top: 10px;
+body header .container div.header-tools div.language div.list a i {
+  display: none;
+}
+
+body header .container div.header-tools div.language div.list a.acitve, body header .container div.header-tools div.language div.list a:hover {
+  color: #F4AD33;
+}
+
+body header .container div.header-tools div.language div.list a.acitve i, body header .container div.header-tools div.language div.list a:hover i {
+  font-size: 18px;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+body header .container div.header-tools div.language div.list a:first-of-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20px);
+          transform: translate(-50%, -20px);
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #4b4b4b;
 }
 
 body header .container div.header-tools div.language div.list a:last-of-type {
-  padding-bottom: 10px;
+  border-bottom: none;
 }
 
 body header .container div.header-tools div.language.on button i {
@@ -1524,6 +1568,7 @@ body header .container div.header-tools div.language.on button i {
 }
 
 body header .container div.header-tools div.language.on div.list {
+  overflow: visible;
   max-height: 1000px;
 }
 
@@ -1582,19 +1627,19 @@ body header .container div.header-tools button.main-menu u:last-of-type {
   }
 }
 
-body header.black .container div.header-tools a.login {
+body header.black .container div.header-tools a.login, body header.bg .container div.header-tools a.login {
   color: #000;
 }
 
-body header.black .container div.header-tools div.language button {
+body header.black .container div.header-tools div.language button, body header.bg .container div.header-tools div.language button {
   color: #000;
 }
 
-body header.black .container div.header-tools button.main-menu u {
+body header.black .container div.header-tools button.main-menu u, body header.bg .container div.header-tools button.main-menu u {
   background: #000;
 }
 
-body header.black .container div.header-tools button.main-menu span {
+body header.black .container div.header-tools button.main-menu span, body header.bg .container div.header-tools button.main-menu span {
   color: #000;
 }
 
@@ -1603,9 +1648,24 @@ body nav#main-menu {
 }
 
 body div#content {
-  background: #ccc;
+  /* MAIN */
   /* SUB */
-  /* SUB */
+}
+
+body div#content.main div.container-full {
+  padding: 100px 20px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main div.container-full {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 1200px;
+    padding: 0;
+  }
 }
 
 body div#content.main section.main {
@@ -1614,6 +1674,7 @@ body div#content.main section.main {
   overflow: hidden;
   padding: 100px 0;
   background: #efefef;
+  min-height: 100vh;
 }
 
 body div#content.main section.main div.main-image ul.slider {
@@ -1866,7 +1927,523 @@ body div#content.main section.main div.links a:nth-of-type(4)::before {
   }
 }
 
-body div#content.main section.community .container {
-  padding: 100px 0;
+body div#content.main section.community {
+  position: relative;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full {
+    font-size: 0;
+  }
+}
+
+body div#content.main section.community .container-full div.board {
+  position: relative;
+  margin: 0 0 25px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.board {
+    display: inline-block;
+    vertical-align: top;
+    width: calc((100% - 135px) / 2);
+  }
+  body div#content.main section.community .container-full div.board.notice {
+    margin-right: 134px;
+  }
+}
+
+body div#content.main section.community .container-full div.board h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.board h3 {
+    font-size: 24px;
+  }
+}
+
+body div#content.main section.community .container-full div.board div.headline {
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+}
+
+body div#content.main section.community .container-full div.board div.headline a {
+  display: block;
+}
+
+body div#content.main section.community .container-full div.board div.headline a p.date {
+  display: inline-block;
+  vertical-align: top;
+  width: 80px;
+  height: 80px;
+  background: #484D5A;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 14px 0 0;
+  margin: 0;
+}
+
+body div#content.main section.community .container-full div.board div.headline a p.date strong {
+  display: block;
+  font-size: 20px;
+}
+
+body div#content.main section.community .container-full div.board div.headline a p.text {
+  display: inline-block;
+  vertical-align: top;
+  background: #F7F7F7;
+  width: calc(100% - 81px);
+  height: 80px;
+  border-bottom: 1px solid #DEDEDE;
+  padding: 12px 10px 10px;
+}
+
+body div#content.main section.community .container-full div.board div.headline a p.text strong {
+  display: block;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
+body div#content.main section.community .container-full div.board div.headline a p.text span {
+  display: block;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+body div#content.main section.community .container-full div.board ul {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.board ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 20px 20px 10px;
+  }
+  body div#content.main section.community .container-full div.board ul li a {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}
+
+body div#content.main section.community .container-full div.board a.more {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  font-size: 0;
+  border: 1px solid #9B9B9B;
+}
+
+body div#content.main section.community .container-full div.board a.more::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 1px;
+  height: 16px;
+  background: #9B9B9B;
+}
+
+body div#content.main section.community .container-full div.board a.more::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 16px;
+  height: 1px;
+  background: #9B9B9B;
+}
+
+body div#content.main section.community .container-full div.gallery {
+  position: relative;
+  margin: 0 0 25px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.gallery {
+    display: inline-block;
+    vertical-align: top;
+  }
+  body div#content.main section.community .container-full div.gallery.photo {
+    margin-right: 134px;
+    width: 700px;
+  }
+  body div#content.main section.community .container-full div.gallery.mov {
+    width: 365px;
+  }
+}
+
+body div#content.main section.community .container-full div.gallery h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.gallery h3 {
+    font-size: 24px;
+  }
+}
+
+body div#content.main section.community .container-full div.gallery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body div#content.main section.community .container-full div.gallery ul li {
+  display: none;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.gallery ul li {
+    display: inline-block;
+    width: calc((100% - 21px) / 2);
+    margin: 0 0 0 20px;
+  }
+}
+
+body div#content.main section.community .container-full div.gallery ul li:first-child {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.gallery ul li:first-child {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+body div#content.main section.community .container-full div.gallery ul li a {
+  display: block;
+}
+
+body div#content.main section.community .container-full div.gallery ul li a p.image {
+  width: 100%;
+  height: auto;
+  padding-top: 60%;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.community .container-full div.gallery ul li a p.image {
+    height: 210px;
+    padding: 0;
+  }
+}
+
+body div#content.main section.community .container-full div.gallery ul li a p.image img {
+  display: none;
+}
+
+body div#content.main section.community .container-full div.gallery.mov ul li {
+  width: 100%;
+}
+
+body div#content.main section.community .container-full div.gallery.mov ul li a p {
+  position: relative;
+}
+
+body div#content.main section.community .container-full div.gallery.mov ul li a p:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='59.585' height='59.585' viewBox='0 0 59.585 59.585'%3E%3Cg id='그룹_2349' data-name='그룹 2349' transform='translate(0 0.934)'%3E%3Cg id='그룹_56' data-name='그룹 56' transform='translate(0 -0.934)'%3E%3Cg id='타원_2' data-name='타원 2' fill='none' stroke='%23fff' stroke-width='6'%3E%3Ccircle cx='29.792' cy='29.792' r='29.792' stroke='none'/%3E%3Ccircle cx='29.792' cy='29.792' r='26.792' fill='none'/%3E%3C/g%3E%3Cpath id='다각형_1' data-name='다각형 1' d='M10.68,0l10.68,17.988H0Z' transform='translate(41.597 20.236) rotate(90)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat rgba(0, 0, 0, 0.4) center;
+}
+
+body div#content.main section.community .container-full div.gallery a.more {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  font-size: 0;
+  border: 1px solid #9B9B9B;
+}
+
+body div#content.main section.community .container-full div.gallery a.more::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 1px;
+  height: 16px;
+  background: #9B9B9B;
+}
+
+body div#content.main section.community .container-full div.gallery a.more::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 16px;
+  height: 1px;
+  background: #9B9B9B;
+}
+
+body div#content.main section.map {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(#fff, #E8E8E8);
+}
+
+body div#content.main section.map .container-full div.layer {
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body div#content.main section.map .container-full div.layer h3 {
+  font-size: 34px;
+  margin: 0 0 6px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.map .container-full div.layer h3 {
+    font-size: 48px;
+  }
+}
+
+body div#content.main section.map .container-full div.layer h3 small {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body div#content.main section.map .container-full div.layer p.text {
+  font-size: 16px;
+  margin: 0 0 36px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.map .container-full div.layer p.text {
+    font-size: 20px;
+  }
+}
+
+body div#content.main section.map .container-full div.layer div.select-box {
+  position: relative;
+  z-index: 10;
+  height: 46px;
+  margin: 0 0 20px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.map .container-full div.layer div.select-box {
+    width: 378px;
+    margin: 0 0 25px;
+  }
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 46px 0 0;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul li {
+  display: none;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul li.active {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul li.active button {
+  width: 100%;
+  border: none;
+  margin: 0;
+  text-align: left;
+  line-height: 46px;
+  background: #fff;
+  padding: 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #F49533;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul li.active button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top-color: #272727;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul.active li {
+  display: block;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul.active li button {
+  width: 100%;
+  border: 1px solid #9F9F9F;
+  text-align: left;
+  padding: 10px 12px;
+  margin: 0;
+  background: #4B4B4B;
+  color: #fff;
+  font-size: 16px;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul.active li button.acitve, body div#content.main section.map .container-full div.layer div.select-box ul.active li button:hover {
+  color: #F4AD33;
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul.active li.active button {
+  padding: 0 12px;
+  background: #fff;
+  color: #F49533;
+  font-size: 18px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+body div#content.main section.map .container-full div.layer div.select-box ul.active li.active button::after {
+  border-top-color: transparent;
+  border-bottom-color: #272727;
+  top: 10px;
+}
+
+body div#content.main section.map .container-full div.layer p.count {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #707070;
+  font-size: 20px;
+  padding: 0 0 10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.map .container-full div.layer p.count {
+    width: 378px;
+    font-size: 22px;
+    padding: 0 0 12px;
+  }
+}
+
+body div#content.main section.map .container-full div.layer p.count strong {
+  font-weight: 900;
+}
+
+body div#content.main section.map .container-full div.layer p.count a.more {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.map .container-full div.layer p.count a.more {
+    font-size: 16px;
+  }
+}
+
+body div#content.main section.map .container-full div.layer p.count a.more i {
+  position: relative;
+  top: 2px;
+  color: #999999;
+}
+
+body div#content.main section.map .container-full div.map-wall {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.map .container-full div.map-wall {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 1220px;
+    height: 450px;
+    background: url(../images/map-gray.svg) no-repeat right center/auto 100%;
+  }
+  body div#content.main section.map .container-full div.map-wall::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 52px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33.607' height='51.325' viewBox='0 0 33.607 51.325'%3E%3Cg id='그룹_3315' data-name='그룹 3315' transform='translate(-1896.809 -1321.12)'%3E%3Cg id='그룹_2341' data-name='그룹 2341' transform='translate(1896.809 1321.12)'%3E%3Cpath id='패스_22241' data-name='패스 22241' d='M73.644,446.363a16.8,16.8,0,1,1,33.607,0c0,14.513-16.8,34.521-16.8,34.521S73.644,460.732,73.644,446.363Z' transform='translate(-73.644 -429.559)' fill='%23f9a532'/%3E%3C/g%3E%3Cellipse id='타원_101' data-name='타원 101' cx='8.466' cy='7.937' rx='8.466' ry='7.937' transform='translate(1905.018 1330.644)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center bottom/100% auto;
+  }
+  body div#content.main section.map .container-full div.map-wall.en::before {
+    left: 460px;
+    top: 150px;
+  }
+  body div#content.main section.map .container-full div.map-wall.cn::before {
+    left: 990px;
+    top: 165px;
+  }
+  body div#content.main section.map .container-full div.map-wall.jp::before {
+    left: 1066px;
+    top: 142px;
+  }
+  body div#content.main section.map .container-full div.map-wall.ca::before {
+    left: 455px;
+    top: 102px;
+  }
+  body div#content.main section.map .container-full div.map-wall.au::before {
+    left: 1050px;
+    top: 302px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

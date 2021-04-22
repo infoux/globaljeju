@@ -80,6 +80,7 @@
 
 @mixin gradient($startColor:#eee, $ingColor: #eee, $endColor: white) {
     background-color: $startColor;
+    background: linear-gradient(top, $startColor, $ingColor, $endColor);
     background: -webkit-linear-gradient(top, $startColor, $ingColor, $endColor);
     background: -moz-linear-gradient(top, $startColor, $ingColor, $endColor);
     background: -ms-linear-gradient(top, $startColor, $ingColor, $endColor);
@@ -88,6 +89,7 @@
 
 @mixin gradienth($startColor:#eee, $ingColor: #eee, $endColor: white) {
     background-color: $startColor;
+    background: linear-gradient(left, $startColor, $ingColor, $endColor);
     background: -webkit-linear-gradient(left, $startColor, $ingColor, $endColor);
     background: -moz-linear-gradient(left, $startColor, $ingColor, $endColor);
     background: -ms-linear-gradient(left, $startColor, $ingColor, $endColor);

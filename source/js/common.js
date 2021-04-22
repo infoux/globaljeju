@@ -1,6 +1,33 @@
 $(function () {
 
+
+
+	var windowh = $(window).height();
+	var windowW = $(window).width();
+    
+		$(window).scroll(function(e) {
+
+			var scrollY = $(document).scrollTop();
+
+			if (scrollY > "2") {
+				$("#header").addClass("bg");
+
+			} else {
+				$("#header").removeClass("bg");
+
+            }
+
+		 });
+
+
     $('.main-image li').each(function () {
+        $(this).css(
+            "background",
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+        );
+    });
+
+    $('.gallery li').each(function () {
         $(this).css(
             "background",
             "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
@@ -11,57 +38,64 @@ $(function () {
         $("div.language").toggleClass("on");
     });
 
-    $.scrollify({
 
-        section: ".fullpage",
-        scrollbars:false,
-        interstitialSection: "#footer",
-        before: function (i, panels) {
-            var ref = panels[i].attr("data-section-name");
-            $("#header").removeClass("black");
 
-            console.log(ref);
+    if (windowW > 1200) {
+        $.scrollify({
 
-            panels[i].find(".gallery0,.gallery1,.gallery2").addClass("moved");
+            section: ".fullpage",
+            scrollbars:false,
+            interstitialSection: "#footer",
+            before: function (i, panels) {
+                var ref = panels[i].attr("data-section-name");
+                $("#header").removeClass("black");
 
-            if (ref === "MAIN") {
 
-              $("section.main")
-              .find(".gallery0,.gallery1,.gallery2")
-              .removeClass("moved");
+                panels[i].find(".gallery0,.gallery1,.gallery2").addClass("moved");
 
-            }
-            if (ref === "COMMUNITY") {
+                if (ref === "MAIN") {
 
-              $("#header").addClass("black");
-                $(".ios7 .content").removeClass("moved");
-                initialPosition();
+                $("section.main")
+                .find(".gallery0,.gallery1,.gallery2")
+                .removeClass("moved");
 
-            }
-            if (ref === "MAP") {
-
-              $("#header").addClass("black");
-                $(".ios7 .content").addClass("moved");
-                $(".ios7 .gallery0").css("top", 0);
-                
-            }
-        },
-        after: function (i, panels) {
-            var ref = panels[i].attr("data-section-name");
-
-            if (ref === "main") {
-                $(".main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
-            }
-            for (var j = 0; j < panels.length; j++) {
-                if (j > i) {
-
-                    //panels[j].find(".moved").removeClass("moved");
                 }
-            }
-        },
-        afterResize: initialPosition,
-        afterRender: initialPosition
-    });
+                if (ref === "COMMUNITY") {
+
+                $("#header").addClass("black");
+                    $(".ios7 .content").removeClass("moved");
+                    initialPosition();
+
+                }
+                if (ref === "MAP") {
+
+                $("#header").addClass("black");
+                    $(".ios7 .content").addClass("moved");
+                    $(".ios7 .gallery0").css("top", 0);
+                    
+                }
+            },
+            after: function (i, panels) {
+                var ref = panels[i].attr("data-section-name");
+
+                if (ref === "main") {
+                    $(".main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
+                }
+                for (var j = 0; j < panels.length; j++) {
+                    if (j > i) {
+
+                        //panels[j].find(".moved").removeClass("moved");
+                    }
+                }
+            },
+            afterResize: initialPosition,
+            afterRender: initialPosition
+        });
+    }
+
+
+
+
 
     function initialPosition() {
 
@@ -224,13 +258,44 @@ $(function () {
 
 
 
+    $("section.map .select-box button").on("click", function(e){
+
+
+
+        $("section.map .select-box ul").toggleClass("active");
+
+
+    });
 
 
 
 
 
 
+    // var iid;
+	
+    // $(window).on("resize", function(){
+
+    //     windowh = $(window).height();
+    //     windowW = $(window).width();
+
+        
+    //     clearTimeout(iid);
+
+    //     iid = setTimeout(doneResizing, 500);
+        
+    // });
+    
+
+    // function doneResizing(){
+
+    //     location.reload();
+    //     }
 
 
+
+
+        $('.map-wall').plaxify({"xRange":60,"yRange":60});
+        $.plax.enable();
 
 });

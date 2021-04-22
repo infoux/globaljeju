@@ -1374,17 +1374,6 @@ body header {
   text-align: center;
 }
 
-@media (max-width: 1199px) {
-  body header.bg {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.4)));
-    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
-    -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-  }
-}
-
 body header .container {
   height: 82px;
 }
@@ -1416,6 +1405,10 @@ body header .container h1 a {
     width: 113px;
     height: 78px;
   }
+}
+
+body header .container h1 a.white {
+  background: url("../images/logo-white.png") no-repeat center/100% auto;
 }
 
 body header .container div.header-tools {
@@ -1508,8 +1501,10 @@ body header .container div.header-tools div.language div.list {
   max-height: 0;
   overflow: hidden;
   min-width: 120px;
-  left: 0;
-  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 50px;
   background: #4B4B4B;
   -webkit-box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.3);
@@ -1627,20 +1622,43 @@ body header .container div.header-tools button.main-menu u:last-of-type {
   }
 }
 
-body header.black .container div.header-tools a.login, body header.bg .container div.header-tools a.login {
+body header.black .container div.header-tools a.login {
   color: #000;
 }
 
-body header.black .container div.header-tools div.language button, body header.bg .container div.header-tools div.language button {
+body header.black .container div.header-tools div.language button {
   color: #000;
 }
 
-body header.black .container div.header-tools button.main-menu u, body header.bg .container div.header-tools button.main-menu u {
+body header.black .container div.header-tools button.main-menu u {
   background: #000;
 }
 
-body header.black .container div.header-tools button.main-menu span, body header.bg .container div.header-tools button.main-menu span {
+body header.black .container div.header-tools button.main-menu span {
   color: #000;
+}
+
+@media (max-width: 1199px) {
+  body header.bg {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.4)));
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  body header.bg .container div.header-tools a.login {
+    color: #000;
+  }
+  body header.bg .container div.header-tools div.language button {
+    color: #000;
+  }
+  body header.bg .container div.header-tools button.main-menu u {
+    background: #000;
+  }
+  body header.bg .container div.header-tools button.main-menu span {
+    color: #000;
+  }
 }
 
 body nav#main-menu {
@@ -1654,6 +1672,7 @@ body div#content {
 
 body div#content.main div.container-full {
   padding: 100px 20px;
+  z-index: 10;
 }
 
 @media (min-width: 1200px) {
@@ -1665,6 +1684,290 @@ body div#content.main div.container-full {
             transform: translate(-50%, -50%);
     width: 1200px;
     padding: 0;
+  }
+}
+
+body div#content.main section.event {
+  position: relative;
+  min-height: 100vh;
+  background: url(../images/event-bg.png) no-repeat center/cover;
+}
+
+body div#content.main section.event::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+body div#content.main section.event .container-full {
+  z-index: 10;
+  position: relative;
+  height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full {
+    height: auto;
+  }
+}
+
+body div#content.main section.event .container-full h3 {
+  margin: 6vh 0 70px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  word-break: keep-all;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full h3 {
+    font-size: 62px;
+    margin: 0 0 94px;
+  }
+}
+
+body div#content.main section.event .container-full h3 small {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+  margin: 0 0 6px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full h3 small {
+    font-size: 32px;
+  }
+}
+
+body div#content.main section.event .container-full h3 small span {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full h3 small span {
+    display: inline;
+  }
+}
+
+body div#content.main section.event .container-full ul.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full ul.links {
+    text-align: left;
+    margin-bottom: 94px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full ul.links li {
+    display: inline-block;
+  }
+}
+
+body div#content.main section.event .container-full ul.links li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0 0 10px;
+  margin: 0 0 20px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full ul.links li a {
+    font-size: 36px;
+    padding: 0 0 12px;
+    margin: 0 40px 0 0;
+  }
+}
+
+body div#content.main section.event .container-full ul.links li a i {
+  position: relative;
+  top: 2px;
+  color: #F9CB32;
+  font-size: 32px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full ul.links li a i {
+    font-size: 52px;
+    top: 8px;
+  }
+}
+
+body div#content.main section.event .container-full ul.links li:first-of-type a {
+  border-bottom: 1px solid #fff;
+}
+
+body div#content.main section.event .container-full div.buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full div.buttons {
+    position: static;
+  }
+}
+
+body div#content.main section.event .container-full div.buttons a {
+  display: block;
+  position: relative;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full div.buttons a {
+    display: inline-block;
+    width: calc((100% - 31px) / 3);
+    -webkit-box-shadow: 3 3px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 3 3px 5px 0 rgba(0, 0, 0, 0.3);
+    line-height: 120px;
+    margin-right: 15px;
+    padding-left: 90px;
+  }
+  body div#content.main section.event .container-full div.buttons a:last-of-type {
+    margin-right: 0;
+  }
+}
+
+body div#content.main section.event .container-full div.buttons a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -126px;
+  top: 13px;
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full div.buttons a::before {
+    width: 54px;
+    height: 54px;
+    top: 28px;
+    left: 90px;
+    margin: 0;
+  }
+}
+
+body div#content.main section.event .container-full div.buttons a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn01 {
+  background: #6CB250;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn01::before {
+  background: url(../images/icon-banner01.svg) no-repeat center/90% auto;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full div.buttons a.btn01::before {
+    background-size: 84% auto;
+  }
+}
+
+body div#content.main section.event .container-full div.buttons a.btn01::after {
+  background: url(../images/corner-banner01.svg) no-repeat center/100% 100%;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn02 {
+  background: #27B2C1;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn02::before {
+  background: url(../images/icon-banner02.svg) no-repeat center/90% auto;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn02::after {
+  background: url(../images/corner-banner02.svg) no-repeat center/100% 100%;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn03 {
+  background: #178CD4;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn03::before {
+  background: url(../images/icon-banner03.svg) no-repeat center/98% auto;
+}
+
+body div#content.main section.event .container-full div.buttons a.btn03::after {
+  background: url(../images/corner-banner03.svg) no-repeat center/100% 100%;
+}
+
+body div#content.main section.event .container-full div.mov-layer {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full div.mov-layer {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 180px;
+    width: 560px;
+    font-size: 0;
+    background: #DCDCDC;
+  }
+  body div#content.main section.event .container-full div.mov-layer iframe {
+    width: 560px;
+    height: 306px;
+    border: 7px solid #0082D2;
+    background: #000;
+  }
+  body div#content.main section.event .container-full div.mov-layer div.tools {
+    padding: 18px;
+    font-size: 16px;
+  }
+  body div#content.main section.event .container-full div.mov-layer div.tools input {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+  }
+  body div#content.main section.event .container-full div.mov-layer div.tools label {
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 500;
+    color: #555555;
+    padding: 0 0 0 6px;
+  }
+  body div#content.main section.event .container-full div.mov-layer div.tools button {
+    float: right;
+    border: none;
+    background: none;
+    color: #555555;
+  }
+  body div#content.main section.event .container-full div.mov-layer div.tools button i {
+    font-size: 22px;
+    vertical-align: bottom;
   }
 }
 
@@ -1956,7 +2259,7 @@ body div#content.main section.community .container-full div.board {
 
 body div#content.main section.community .container-full div.board h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 10px;
 }
 
@@ -2444,6 +2747,196 @@ body div#content.main section.map .container-full div.map-wall {
   body div#content.main section.map .container-full div.map-wall.au::before {
     left: 1050px;
     top: 302px;
+  }
+}
+
+body footer#footer {
+  background: #2F2F2F;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer {
+    padding: 0 0 40px 0;
+  }
+}
+
+body footer#footer div.outsite-slider {
+  background: #404040;
+  position: relative;
+  margin: 0 0 40px;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer div.outsite-slider {
+    display: block;
+    background: #fff;
+    border-top: 1px solid #E5E5E5;
+  }
+}
+
+body footer#footer div.outsite-slider div.container {
+  padding: 20px 0;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer div.outsite-slider div.container {
+    padding: 20px 50px;
+  }
+}
+
+body footer#footer div.outsite-slider div.container div.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+body footer#footer div.outsite-slider div.container div.slider div.slide {
+  display: inline-block;
+  padding: 0 40px;
+  vertical-align: top;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer div.outsite-slider div.container div.slider div.slide {
+    padding: 0 16px;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+}
+
+body footer#footer div.outsite-slider div.container div.slider div.slide a {
+  display: block;
+  color: #D5D5D5;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer div.outsite-slider div.container div.slider div.slide a {
+    font-size: 0;
+  }
+}
+
+body footer#footer div.outsite-slider div.container div.slider div.slide a img {
+  display: none;
+  width: 152px;
+  height: 46px;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer div.outsite-slider div.container div.slider div.slide a img {
+    display: block;
+  }
+}
+
+body footer#footer div.outsite-slider div.container button.arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 0;
+  background: transparent;
+}
+
+body footer#footer div.outsite-slider div.container button.arrow i {
+  font-size: 20px;
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer div.outsite-slider div.container button.arrow i {
+    color: #A8A8A8;
+    font-size: 32px;
+  }
+}
+
+body footer#footer div.outsite-slider div.container button.arrow.left {
+  left: 10px;
+}
+
+body footer#footer div.outsite-slider div.container button.arrow.right {
+  right: 10px;
+}
+
+body footer#footer > .container {
+  color: #B1B1B1;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer > .container {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 170px;
+  }
+}
+
+body footer#footer > .container h2 {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer > .container h2 {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 124px;
+    height: 75px;
+    font-size: 0;
+    margin: 0;
+    background: url(../images/logo-gray.svg) no-repeat center/100% auto;
+  }
+}
+
+body footer#footer > .container ul {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+body footer#footer > .container ul li {
+  display: inline-block;
+}
+
+body footer#footer > .container ul li a {
+  display: block;
+  color: #B1B1B1;
+}
+
+body footer#footer > .container ul li a::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: #b1b1b1;
+  margin: 0 10px;
+}
+
+body footer#footer > .container ul li:last-child a::after {
+  display: none;
+}
+
+body footer#footer > .container address {
+  font-style: normal;
+}
+
+body footer#footer > .container address p {
+  margin: 0 0 6px;
+}
+
+body footer#footer > .container address p span {
+  display: block;
+  word-break: keep-all;
+}
+
+@media (min-width: 1200px) {
+  body footer#footer > .container address p span {
+    display: inline;
   }
 }
 /*# sourceMappingURL=style.css.map */

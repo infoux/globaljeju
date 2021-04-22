@@ -11,6 +11,7 @@ $(function () {
 
 			if (scrollY > "2") {
 				$("#header").addClass("bg");
+                $("#header h1 a").removeClass("white");
 
 			} else {
 				$("#header").removeClass("bg");
@@ -38,6 +39,11 @@ $(function () {
         $("div.language").toggleClass("on");
     });
 
+    if ($("div#content.main section:first-of-type()").attr("data-section-name") === "EVENT") {
+        // $("header#header").addClass("black");
+
+        $("#header h1 a").addClass("white");
+    }
 
 
     if (windowW > 1200) {
@@ -48,29 +54,33 @@ $(function () {
             interstitialSection: "#footer",
             before: function (i, panels) {
                 var ref = panels[i].attr("data-section-name");
-                $("#header").removeClass("black");
 
 
                 panels[i].find(".gallery0,.gallery1,.gallery2").addClass("moved");
 
-                if (ref === "MAIN") {
+                if (ref === "EVENT") {
+                    $("#header").removeClass("black");
 
-                $("section.main")
-                .find(".gallery0,.gallery1,.gallery2")
-                .removeClass("moved");
+                // $("section.main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
+
+                }
+                
+                if (ref === "MAIN") {
+                    $("#header").removeClass("black");
+
+                // $("section.main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
 
                 }
                 if (ref === "COMMUNITY") {
+                    $("#header").addClass("black");
 
-                $("#header").addClass("black");
-                    $(".ios7 .content").removeClass("moved");
+                    // $(".ios7 .content").removeClass("moved");
                     initialPosition();
 
                 }
                 if (ref === "MAP") {
-
-                $("#header").addClass("black");
-                    $(".ios7 .content").addClass("moved");
+                    $("#header").addClass("black");
+                    // $(".ios7 .content").addClass("moved");
                     $(".ios7 .gallery0").css("top", 0);
                     
                 }
@@ -78,8 +88,9 @@ $(function () {
             after: function (i, panels) {
                 var ref = panels[i].attr("data-section-name");
 
-                if (ref === "main") {
-                    $(".main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
+                if (ref === "EVENT") {
+                    $("#header h1 a").addClass("white");
+                    // $(".main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
                 }
                 for (var j = 0; j < panels.length; j++) {
                     if (j > i) {
@@ -103,19 +114,22 @@ $(function () {
             .scrollify
             .current();
 
-        if (current.hasClass("ios7") === false) {
-            var height = parseInt($(".ios7").height());
-            var f = parseInt($(".features .gallery1").height()) - 50;
+        // if (current.hasClass("ios7") === false) {
+        //     var height = parseInt($(".ios7").height());
+        //     var f = parseInt($(".features .gallery1").height()) - 50;
 
-            var top = 0 - (height * 0.4) - (height - f);
-            $(".ios7 .gallery0").css("top", top);
-        } else {
-            $("section.main")
-                .find(".gallery0,.gallery1,.gallery2")
-                .addClass("moved");
-        }
+        //     var top = 0 - (height * 0.4) - (height - f);
+        //     $(".ios7 .gallery0").css("top", top);
+        // } else {
+        //     $("section.main").find(".gallery0,.gallery1,.gallery2").addClass("moved");
+        // }
 
     }
+
+
+
+
+
 
     var $slider1 = $('.slider1'),
         $firstSlide1 = $slider1
@@ -297,5 +311,63 @@ $(function () {
 
         $('.map-wall').plaxify({"xRange":60,"yRange":60});
         $.plax.enable();
+
+
+
+
+
+
+
+
+        var $popStatus = $('.pagingInfo');
+        var $popSlickElement = $('.outsite-slider div.slider')
+    
+        $popSlickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    
+            var i = (currentSlide ? currentSlide : 0) + 1;
+    
+            $popStatus.html('<strong>'+ i + '</strong> /' + slick.slideCount);
+    
+        });
+    
+    
+        $popSlickElement.slick({  
+            mobileFirst: true,
+            autoplay:true,
+            speed: 1000,
+            dots: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            nextArrow:$('.outsite-slider button.right'),
+            prevArrow:$('.outsite-slider button.left'),
+    
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        variableWidth:true,
+                        dotsClass: 'custom_paging',
+                        customPaging: function (slider, i) {
+                            //FYI just have a look at the object to find available information
+                            //press f12 to access the console in most browsers
+                            //you could also debug or look in the source
+                            var slideNumber   = (i + 1),
+                                totalSlides = slider.slideCount;
+                            return '<a class="custom-dot" role="button" title="' + slideNumber + ' of ' + totalSlides + '"><span class="string">' + slideNumber + '</span></a>';
+                        }
+    
+                    }
+                }
+            ]
+    
+            
+            
+        });
+
+
 
 });

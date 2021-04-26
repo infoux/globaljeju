@@ -7,3 +7,22 @@ $color-main: #0075bc;
 
 $color-black: #222;
 $color-gray: #1f222d;
+
+
+
+
+$theme-bg-color1 : #ccc;
+$theme-bg-color2 : #aaa;
+$theme-bg-color3 : #999;
+
+
+
+div#content.sub01 {
+    background:$theme-bg-color1
+}
+div#content.sub02 {
+    background:$theme-bg-color2
+}
+div#content.sub03 {
+    background:$theme-bg-color3
+}

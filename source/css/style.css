@@ -1409,10 +1409,12 @@ body header {
   right: 0;
   top: 0;
   text-align: center;
+  pointer-events: none;
 }
 
 body header .container {
   height: 82px;
+  pointer-events: none;
 }
 
 @media (min-width: 1200px) {
@@ -3079,11 +3081,13 @@ body div#content.sub div.sub-head {
   top: 0;
   padding-top: 136px;
   overflow: hidden;
+  -webkit-box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.16);
 }
 
 @media (min-width: 1200px) {
   body div#content.sub div.sub-head {
-    padding-top: 240px;
+    padding-top: 280px;
   }
 }
 
@@ -3298,6 +3302,7 @@ body div#content.sub div.sub-head nav.sub-menu.active a {
   font-size: 16px;
   color: #fff;
   font-weight: 400;
+  pointer-events: all;
 }
 
 @media (min-width: 1200px) {
@@ -3332,7 +3337,7 @@ body div#content.sub div.sub-head article.event-navi {
 
 @media (min-width: 1200px) {
   body div#content.sub div.sub-head article.event-navi {
-    padding: 100px 0 80px;
+    padding: 60px 0 80px;
   }
 }
 
@@ -3445,7 +3450,7 @@ body div#content.sub div.sub-head article.menu-depth3 {
 
 @media (min-width: 1200px) {
   body div#content.sub div.sub-head article.menu-depth3 {
-    padding: 0;
+    padding: 40px 0 0;
     font-size: 0;
   }
 }
@@ -3882,11 +3887,171 @@ body div#content.sub div.sub-head .bubble ul.circles li:nth-child(6) {
   }
 }
 
+body div#content.sub div.content-box {
+  -webkit-transition: none;
+  transition: none;
+}
+
 body div#content.sub div.content-box article {
   text-align: center;
 }
 
-body div#content.sub div.content-box article.ready:before {
+body div#content.sub div.content-box article.navigation {
+  display: none;
+}
+
+body div#content.sub div.content-box article.event-list {
+  padding: 20px 0;
+  min-height: 800px;
+  background: url(../images/bg-event-list.png) no-repeat center bottom/100% auto;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-list {
+    min-height: 1800px;
+    padding: 100px 0;
+  }
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li {
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 20px;
+  -webkit-box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  -webkit-animation: event-list 1s;
+          animation: event-list 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-list div.container ul.list li {
+    margin-bottom: 60px;
+  }
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li a {
+  display: block;
+  position: relative;
+  padding: 20px 80px 20px 20px;
+  color: #fff;
+  word-break: keep-all;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-list div.container ul.list li a {
+    padding: 50px 100px 50px 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 29px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.164' height='30.287' viewBox='0 0 18.164 30.287'%3E%3Cpath d='M-5269.333-988l16,14.4-16,14.4' transform='translate(5270.002 988.744)' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center/100% auto;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-list div.container ul.list li a::after {
+    width: 30px;
+    height: 54px;
+    right: 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li a h4 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-list div.container ul.list li a h4 {
+    font-size: 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li a h4 small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-list div.container ul.list li a h4 small {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li a p.text {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  font-size: 15px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-list div.container ul.list li a p.text {
+    font-size: 22px;
+  }
+}
+
+@-webkit-keyframes event-list {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes event-list {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body div#content.sub div.content-box article.event-list:before {
   content: "";
   display: block;
   position: fixed;
@@ -3895,7 +4060,7 @@ body div#content.sub div.content-box article.ready:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #999;
+  background: #2F2453;
 }
 
 body footer#footer {
@@ -3913,7 +4078,7 @@ body footer#footer {
 body footer#footer div.outsite-slider {
   background: #404040;
   position: relative;
-  margin: 0 0 40px;
+  margin: 0;
 }
 
 @media (min-width: 1200px) {
@@ -4013,6 +4178,7 @@ body footer#footer > .container {
   color: #B1B1B1;
   font-size: 12px;
   text-align: center;
+  margin: 40px 0 0;
 }
 
 @media (min-width: 1200px) {

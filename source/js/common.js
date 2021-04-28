@@ -6,7 +6,7 @@ $(function () {
 	var windowW = $(window).width();
 
 
-    $("div.content-box").css("padding-top", $("div.sub-head").outerHeight());
+    $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
 
     
     
@@ -15,7 +15,7 @@ $(function () {
 
     $(window).on("resize", function(){
 
-        $("div.content-box").css("padding-top", $("div.sub-head").outerHeight());
+        $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
     });
     
 
@@ -24,7 +24,7 @@ $(function () {
 
 			var scrollY = $(document).scrollTop();
 
-			if (scrollY > "2") {
+			if (scrollY > "3") {
 				$(".main-layout #header").addClass("bg");
                 $(".main-layout #header h1 a").removeClass("white");
 
@@ -37,7 +37,7 @@ $(function () {
 
                 $("nav.sub-menu").removeClass("active");
 
-                $("sub.content-box").css("padding-top", $("div.sub-head").outerHeight());
+                $("sub.content-box").css("margin-top", $("div.sub-head").outerHeight());
             }
 
 		 });

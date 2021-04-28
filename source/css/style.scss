@@ -56,10 +56,12 @@ body {
         right:0;
         top:0; 
         text-align:center;
+        pointer-events: none;
 
 
         .container {
             height:82px;
+            pointer-events: none;
 
             @media (min-width: $screen-size-pc) {
                 height:150px;
@@ -1850,9 +1852,10 @@ body {
                 top:0;
                 padding-top:136px;
                 overflow:hidden;
+                @include drop-shadow($x:0px,$y: 4px, $blur: 2px, $spread: 0, $alpha: 0.16);
 
                 @media (min-width: $screen-size-pc) {
-                    padding-top:240px;
+                    padding-top:280px;
                 } 
         
                 &::before {
@@ -2063,7 +2066,8 @@ body {
                             font-size:16px;
                             color:#fff;
                             font-weight:400;
-    
+                            pointer-events: all;
+                            
                             @media (min-width: $screen-size-pc) {
                                 font-size:18px;
                             }
@@ -2094,7 +2098,7 @@ body {
                     padding:20px 0 30px;
 
                     @media (min-width: $screen-size-pc) {
-                        padding:100px 0 80px;
+                        padding:60px 0 80px;
                     } 
 
                     div.container {
@@ -2201,7 +2205,7 @@ body {
                     text-align:center;
 
                     @media (min-width: $screen-size-pc) {
-                        padding:0;
+                        padding:40px 0 0;
                         font-size:0;
                     } 
 
@@ -2667,13 +2671,147 @@ body {
 
             div.content-box {
                 
-                @media (min-width: $screen-size-pc) {
-                } 
+                transition:none;
 
                 article {
                     text-align:center;
 
-                    &.ready {
+                    &.navigation {
+                        display:none;
+                
+                        @media (min-width: $screen-size-pc) {
+                            
+                        } 
+                    }
+
+                    &.event-list {
+                        padding:20px 0;
+                        min-height:800px;
+                        background:url(../images/bg-event-list.png) no-repeat center bottom / 100% auto;
+                
+                        @media (min-width: $screen-size-pc) {
+                            min-height:1800px;
+                            padding:100px 0;
+                        } 
+                
+                        div.container {
+
+                            ul.list {
+                                list-style:none;
+                                padding:0;
+                                margin:0;
+
+                                li {
+                                    background:rgba(255,255,255,0.15);
+                                    margin-bottom:20px;
+                                    @include drop-shadow($x:6px,$y: 6px, $blur: 6px, $spread: 0, $alpha: 0.15);
+                                    opacity:0;
+                                    animation: event-list 1s;
+                                    animation-fill-mode: forwards;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        margin-bottom:60px;
+                                    } 
+
+                                    &:nth-child(1) {
+                                        animation-delay: 0s;
+                                    }
+
+                                    &:nth-child(2) {
+                                        animation-delay: 0.5s;
+                                    }
+
+                                    &:nth-child(3) {
+                                        animation-delay: 1s;
+                                    }
+
+                                    &:nth-child(4) {
+                                        animation-delay: 1.5s;
+                                    }
+
+                                    a {
+                                        display:block;
+                                        position:relative;
+                                        padding:20px 80px 20px 20px;
+                                        color:#fff;
+                                        word-break:keep-all;
+                
+                                        @media (min-width: $screen-size-pc) {
+                                            padding:50px 100px 50px 50px;
+                                        } 
+
+                                        &::after {
+                                            content:"";
+                                            display:block;
+                                            position:absolute;
+                                            right:20px;
+                                            top:50%;
+                                            transform:translateY(-50%);
+                                            width:16px;
+                                            height:29px;
+                                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.164' height='30.287' viewBox='0 0 18.164 30.287'%3E%3Cpath d='M-5269.333-988l16,14.4-16,14.4' transform='translate(5270.002 988.744)' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                
+                                            @media (min-width: $screen-size-pc) {
+                                                width:30px;
+                                                height:54px;
+                                                right:50px;
+                                            } 
+                                        }
+
+                                        h4 {
+                                            margin:0 0 10px;
+                                            font-size:32px;
+                                            font-weight:700;
+                
+                                            @media (min-width: $screen-size-pc) {
+                                                font-size:50px;
+                                            } 
+
+                                            small {
+                                                display:block;
+                                                font-size:12px;
+                                                font-weight:400;
+                                                margin:0 0 10px;
+                
+                                                @media (min-width: $screen-size-pc) {
+                                                    font-size:18px;
+                                                } 
+                                            }
+                                        }
+
+                                        p.text {
+                                            width:100%;
+                                            margin:0;
+                                            overflow:hidden;
+                                            white-space:nowrap;
+                                            text-overflow:ellipsis;
+                                            word-break:keep-all;
+                                            font-size:15px;
+                
+                                            @media (min-width: $screen-size-pc) {
+                                                font-size:22px;
+                                            } 
+                                        }
+                                    }
+
+
+                                }
+                    
+                    
+                                @keyframes event-list {
+                                
+                                    from {
+                                        opacity: 0;
+                                    }
+                                
+                                    to {
+                                        opacity: 1;
+                                    }
+                                
+                                }
+                            }
+                            
+                        }
 
                         &:before {
                             content:"";
@@ -2684,10 +2822,14 @@ body {
                             right:0;
                             top:0;
                             bottom:0;
-                            background:#999;
+                            background:#2F2453;
                         }
 
                     }
+
+
+
+
 
                 }
             }
@@ -2719,7 +2861,7 @@ body {
         div.outsite-slider {
             background: #404040;
             position: relative;
-            margin:0 0 40px;
+            margin:0;
 
             @media (min-width: $screen-size-pc) {
                 display: block;
@@ -2814,6 +2956,7 @@ body {
             color:#B1B1B1;
             font-size:12px;
             text-align:center;
+            margin:40px 0 0;
 
             @media (min-width: $screen-size-pc) {
                 text-align:left;

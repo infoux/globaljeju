@@ -91,6 +91,13 @@ $(function () {
 
 
 
+        $('.event-program-list li p.image').each(function () {
+            $(this).css(
+                "background",
+                "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            );
+        });
+
 
         var $popStatus = $('.pagingInfo');
         var $popSlickElement = $('.outsite-slider div.slider')

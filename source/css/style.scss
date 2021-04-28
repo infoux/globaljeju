@@ -3180,6 +3180,301 @@ body {
                         }
                     }
 
+                    &.event-program-head {
+
+                        div.container {
+                            
+                            h4 {
+                                position:relative;
+                                text-align:center;
+                                margin:0 0 24px;
+                                font-size:28px;
+                                padding:0 34px;
+                                word-break:keep-all;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    position:absolute;
+                                    right:0;
+                                    top:0;
+                                    font-size:42px;
+                                    padding:0 100px 0 0;
+                                    
+                                } 
+            
+
+                                button {
+                                    position:absolute;
+                                    top:50%;
+                                    transform:translateY(-50%);
+                                    width:13.4px;
+                                    height:24px;
+                                    border:none;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        top:36px;
+                                        width:19px;
+                                        height:34px;
+                                        
+                                    } 
+                                    
+                                    &.left {
+                                        left:30px;
+                                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.578' height='25.49' viewBox='0 0 15.578 25.49'%3E%3Cpath d='M0,24,13.412,12,0,0' transform='translate(14.911 24.745) rotate(180)' fill='none' stroke='%23999' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                
+                                        @media (min-width: $screen-size-pc) {
+                                            left:auto;
+                                            right:50px;
+                                            
+                                        } 
+                                    }
+
+                                    &.right {
+                                        right:30px;
+                                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.578' height='25.49' viewBox='0 0 15.578 25.49'%3E%3Cpath d='M0,24,13.412,12,0,0' transform='translate(0.667 0.745)' fill='none' stroke='%23999' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                
+                                        @media (min-width: $screen-size-pc) {
+                                            right:0;
+                                            
+                                        } 
+                                    }
+
+                                    &.off {
+                                        opacity:0.3;
+                                    }
+                                }
+                            }
+
+                            ul.location {
+                                display:none;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    display:inline-block;
+                                    list-style:none;
+                                    margin:0 0 60px;
+                                    padding:0;
+
+                                    li {
+                                        a {
+                                            display:block;
+                                            padding:6px 0;
+                                            font-size:22px;
+                                            font-weight:500;
+                                        }
+
+                                        &.active {
+                                            a {
+                                                font-size:24px;
+                                                font-weight:700;
+                                                color:#339FE6;
+                                                border-bottom:1px solid #339FE6;
+                                            }
+
+                                        }
+                                    }
+                                    
+                                } 
+                            }
+
+                            div.detail {
+                                background:#F6F6F6;
+                                padding:20px 20px 10px;
+                                margin:0 0 20px;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    padding:30px 50px;
+                                    
+                                } 
+            
+
+                                p {
+                                    margin:0 0 10px;
+                                    font-size: 14px;
+                                    font-weight:700;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size:20px;
+                                        display:inline-block;
+                                        margin:0 70px 0 0;
+                                        
+                                    } 
+
+                                    span {
+                                        font-weight:400;
+                                        padding-left:20px;
+                                    }
+                                }
+                            }
+
+
+
+                        }
+
+                    }
+                    
+                    &.event-program-list {
+                        padding:20px 0;
+                
+                        @media (min-width: $screen-size-pc) {
+                            padding:20px 0 40px;
+                            
+                        } 
+
+                        ul.list {
+                            list-style:none;
+                            margin:0;
+                            padding:0 ;
+
+                            li {
+                                a {
+                                    display:block;
+                                    position:relative;
+                                    background:#F6F6F6;
+                                    padding:20px 20px 20px 130px;
+                                    min-height:120px;
+                                    margin:0 0 50px;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        padding:55px 55px 55px 265px;
+                                        min-height:250px;
+                                        
+                                    } 
+                
+
+                                    p.image {
+                                        position:absolute;
+                                        left:0;
+                                        top:0;
+                                        bottom:0;
+                                        width:110px;
+                                        margin:0;
+                
+                                        @media (min-width: $screen-size-pc) {
+                                            width:210px;
+                                            
+                                        } 
+
+                                        img {
+                                            display:none;
+                                        }
+
+                                    }
+
+                                    h5 {
+                                        margin:0 0 10px;
+                                        font-size:18px;
+                
+                                        @media (min-width: $screen-size-pc) {
+                                            font-size:28px;
+                                            margin:0 0 40px;
+                                        } 
+
+                                        small {
+                                            font-size:14px;
+                                            display:block;
+                
+                                            @media (min-width: $screen-size-pc) {
+                                                font-size:22px;
+                
+                                            } 
+    
+                                        }
+
+
+                                    }
+
+                                    p.name {
+                                        margin:0;
+                                        font-size:13px;
+                
+                                        @media (min-width: $screen-size-pc) {
+                                            font-size:20px;
+            
+                                        } 
+
+                                        strong {
+                                            padding:0 10px 0 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.event-navi-btns {
+                        position:relative;
+                        padding:0;
+
+                        button {
+                            position:absolute;
+                            bottom:40px;
+                            border:none;
+                            background:rgba(255,255,255,0.8);
+                            @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.3);
+                            padding:20px;
+                            font-size:0;
+                            word-break:keep-all;
+                
+                            @media (min-width: $screen-size-pc) {
+                                font-size:16px;
+                                width:220px;
+                                
+                            } 
+
+                            &::before {
+                                content:"";
+                                display:block;
+                                width:0;
+                                height:0;
+                                border:5px solid transparent;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    position:absolute;
+                                    top:50%;
+                                    transform:translateY(-50%);
+                                    
+                                } 
+                            }
+
+                            &.left {
+                                left:20px;
+                                padding-left:40px;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    text-align:left;
+                                    
+                                } 
+                                
+                                &::before {
+                                    border-right-color:#444444;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        left:10px;
+                                        
+                                    } 
+                                }
+                            }
+
+                            &.right {
+                                right:20px;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    text-align:right;
+                                    padding-right:40px;
+                                    
+                                } 
+                                
+                                &::before {
+                                    border-left-color:#444444;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        right:20px;
+                                        
+                                    } 
+                                }
+                            }
+                        }
+                    }
+
 
 
 

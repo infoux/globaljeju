@@ -3081,8 +3081,6 @@ body div#content.sub div.sub-head {
   top: 0;
   padding-top: 136px;
   overflow: hidden;
-  -webkit-box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.16);
 }
 
 @media (min-width: 1200px) {
@@ -3563,6 +3561,11 @@ body div#content.sub div.sub-head article.menu-depth3 div.container a.active {
   }
 }
 
+body div#content.sub div.sub-head.fix {
+  -webkit-box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.16);
+}
+
 body div#content.sub div.sub-head.fix nav.sub-menu {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -3894,10 +3897,36 @@ body div#content.sub div.content-box {
 
 body div#content.sub div.content-box article {
   text-align: center;
+  padding: 50px 0 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article {
+    padding: 100px 0 0;
+  }
 }
 
 body div#content.sub div.content-box article.navigation {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.navigation {
+    display: block;
+    font-size: 0;
+  }
+  body div#content.sub div.content-box article.navigation p {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+  }
+  body div#content.sub div.content-box article.navigation p::after {
+    content: "/";
+    padding: 0 15px;
+  }
+  body div#content.sub div.content-box article.navigation p:last-of-type::after {
+    display: none;
+  }
 }
 
 body div#content.sub div.content-box article.event-list {
@@ -3955,6 +3984,16 @@ body div#content.sub div.content-box article.event-list div.container ul.list li
 body div#content.sub div.content-box article.event-list div.container ul.list li:nth-child(4) {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li:nth-child(5) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+body div#content.sub div.content-box article.event-list div.container ul.list li:nth-child(6) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 body div#content.sub div.content-box article.event-list div.container ul.list li a {
@@ -4061,6 +4100,324 @@ body div#content.sub div.content-box article.event-list:before {
   top: 0;
   bottom: 0;
   background: #2F2453;
+}
+
+body div#content.sub div.content-box article.event-head h4 {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-head h4 {
+    font-size: 36px;
+    margin: 0 0 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-head dl {
+  margin: 0;
+  padding: 0;
+}
+
+body div#content.sub div.content-box article.event-head dl dt {
+  float: left;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-head dl dt {
+    font-size: 26px;
+  }
+}
+
+body div#content.sub div.content-box article.event-head dl dd {
+  font-size: 15px;
+  margin: 0 0 30px 84px;
+  word-break: keep-all;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-head dl dd {
+    font-size: 22px;
+    margin: 0 0 40px 170px;
+  }
+}
+
+body div#content.sub div.content-box article.event-head dl dd p {
+  margin: 0;
+}
+
+body div#content.sub div.content-box article.event-schedule {
+  position: relative;
+}
+
+body div#content.sub div.content-box article.event-schedule::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 120px;
+  background: #F6F6F6;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule::before {
+    top: 200px;
+  }
+}
+
+body div#content.sub div.content-box article.event-schedule h4 {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule h4 {
+    font-size: 36px;
+    margin: 0 0 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-schedule div.day {
+  padding: 20px 0;
+}
+
+body div#content.sub div.content-box article.event-schedule div.day h5 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #C9C9C9;
+  margin: 20px 0 14px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule div.day h5 {
+    font-size: 40px;
+    margin: 96px 0 14px;
+  }
+}
+
+body div#content.sub div.content-box article.event-schedule div.day h5 small {
+  font-size: 18px;
+  color: #222222;
+  padding: 0 0 0 20px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule div.day h5 small {
+    font-size: 28px;
+    padding: 0 0 0 30px;
+  }
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list li {
+  margin: 0;
+  padding: 12px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule div.day ul.list li {
+    padding: 20px;
+  }
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list li:nth-child(odd) {
+  background: #fff;
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list li span {
+  display: inline-block;
+  font-size: 12px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule div.day ul.list li span {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list li span::after {
+  content: "|";
+  color: #999;
+  font-size: 10px;
+  padding: 0 5px;
+  position: relative;
+  top: -2px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule div.day ul.list li span::after {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list li span:nth-of-type(2) {
+  min-width: 260px;
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list li span:last-of-type::after {
+  display: none;
+}
+
+body div#content.sub div.content-box article.event-schedule div.day ul.list li strong {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 5px 0 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-schedule div.day ul.list li strong {
+    display: inline-block;
+    font-size: 22px;
+  }
+}
+
+body div#content.sub div.content-box article.event-status h4 {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-status h4 {
+    font-size: 36px;
+    margin: 0 0 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-status p {
+  margin: 0 0 20px;
+  font-size: 17px;
+  word-break: keep-all;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-status p {
+    font-size: 20px;
+  }
+}
+
+body div#content.sub div.content-box article.event-status p span {
+  display: block;
+}
+
+body div#content.sub div.content-box article.event-campaign {
+  background: #BBE0F8;
+  padding: 30px 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-campaign {
+    padding: 128px;
+  }
+}
+
+body div#content.sub div.content-box article.event-campaign div.container h4 {
+  font-size: 28px;
+  margin: 0 0 44px;
+  font-weight: 900;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-campaign div.container h4 {
+    font-size: 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-campaign div.container h4 small {
+  display: block;
+  font-size: inherit;
+}
+
+body div#content.sub div.content-box article.event-campaign div.container h4 span {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-campaign div.container h4 span {
+    display: inline;
+  }
+}
+
+body div#content.sub div.content-box article.event-campaign div.container div.box {
+  position: relative;
+  background: #fff;
+  z-index: 2;
+  padding: 30px 20px;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-campaign div.container div.box {
+    padding: 48px;
+  }
+}
+
+body div#content.sub div.content-box article.event-campaign div.container div.box p {
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0 0 0 14px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-campaign div.container div.box p {
+    margin: 0 0 20px;
+    font-size: 28px;
+    padding: 0 0 0 20px;
+  }
+}
+
+body div#content.sub div.content-box article.event-campaign div.container div.box p::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+body div#content.sub div.content-box article.event-campaign div.container div.box span {
+  color: #207FB2;
+  font-size: 12px;
+  padding: 0 0 0 14px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-campaign div.container div.box span {
+    font-size: 18px;
+    padding: 0 0 0 20px;
+  }
+}
+
+body div#content.sub div.content-box article.event-campaign div.container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 96px;
+  right: 30px;
+  width: 134px;
+  height: 136px;
+  background: url(../images/event-campaign-img.svg) no-repeat center/100% auto;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-campaign div.container::after {
+    width: 360px;
+    height: 366px;
+    top: 0;
+  }
 }
 
 body footer#footer {

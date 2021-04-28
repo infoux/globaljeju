@@ -1852,7 +1852,6 @@ body {
                 top:0;
                 padding-top:136px;
                 overflow:hidden;
-                @include drop-shadow($x:0px,$y: 4px, $blur: 2px, $spread: 0, $alpha: 0.16);
 
                 @media (min-width: $screen-size-pc) {
                     padding-top:280px;
@@ -2354,6 +2353,7 @@ body {
                 }
 
                 &.fix {
+                    @include drop-shadow($x:0px,$y: 4px, $blur: 2px, $spread: 0, $alpha: 0.16);
 
                     nav.sub-menu {
                         transform: translateX(0);
@@ -2673,13 +2673,40 @@ body {
                 
                 transition:none;
 
+
                 article {
                     text-align:center;
+                    padding:50px 0 0;
+                
+                    @media (min-width: $screen-size-pc) {
+                        padding:100px 0 0;
+                        
+                    } 
 
                     &.navigation {
                         display:none;
+                        
                 
                         @media (min-width: $screen-size-pc) {
+                            display:block;
+                            font-size:0;
+
+                            p {
+                                display:inline-block;
+                                font-size:16px;
+                                margin:0;
+
+                                &::after {
+                                    content:"/";
+                                    padding:0 15px;
+                                }
+
+                                &:last-of-type {
+                                    &::after {
+                                        display:none;
+                                    }
+                                }
+                            }
                             
                         } 
                     }
@@ -2728,6 +2755,16 @@ body {
                                     &:nth-child(4) {
                                         animation-delay: 1.5s;
                                     }
+
+                                    &:nth-child(5) {
+                                        animation-delay: 2s;
+                                    }
+
+                                    &:nth-child(6) {
+                                        animation-delay: 2.5s;
+                                    }
+
+
 
                                     a {
                                         display:block;
@@ -2825,6 +2862,322 @@ body {
                             background:#2F2453;
                         }
 
+                    }
+
+                    &.event-head {
+
+                        h4 {
+                            margin:0 0 30px;
+                            text-align:center;
+                            font-size:24px;
+                        
+                
+                            @media (min-width: $screen-size-pc) {
+                                font-size:36px;
+                                margin:0 0 50px;
+                            } 
+                        }
+
+                        dl {
+                            margin:0;
+                            padding:0;
+
+                            dt {
+                                float:left;
+                                font-size:17px;
+                                font-weight:700;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:26px;
+                                } 
+                            }
+
+                            dd {
+                                font-size:15px;
+                                margin:0 0 30px 84px;
+                                word-break:keep-all;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:22px;
+                                    margin:0 0 40px 170px;
+                                } 
+
+                                p {
+                                    margin:0;
+                                }
+                                
+
+                            }
+                        }
+
+
+                    }
+
+                    &.event-schedule {
+
+                        position:relative;
+
+                        &::before {
+                            content:"";
+                            position:absolute;
+                            left:0;
+                            right:0;
+                            bottom:0;
+                            top:120px;
+                            background:#F6F6F6;
+                        
+                
+                            @media (min-width: $screen-size-pc) {
+                                top:200px;
+                            } 
+                        }
+
+                        h4 {
+                            margin:0 0 30px;
+                            text-align:center;
+                            font-size:24px;
+                        
+                
+                            @media (min-width: $screen-size-pc) {
+                                font-size:36px;
+                                margin:0 0 50px;
+                            } 
+                        }
+                        
+                        div.day {
+                            padding:20px 0;
+
+                            h5 {
+                                font-size:26px;
+                                font-weight:900;
+                                color:#C9C9C9;
+                                margin:20px 0 14px;
+                        
+                
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:40px;
+                                    margin:96px 0 14px;
+                                } 
+
+                                small {
+                                    font-size:18px;
+                                    color:#222222;
+                                    padding:0 0 0 20px;
+                        
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size:28px;
+                                        padding:0 0 0 30px;
+                                    } 
+                                }
+                            }
+
+                            ul.list {
+                                margin:0;
+                                padding:0;
+                                list-style:none;
+
+                                li {
+
+                                    margin:0;
+                                    padding:12px;
+                        
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        padding:20px;
+                                    } 
+
+                                    &:nth-child(odd) {
+                                        background:#fff;
+                                    }
+
+                                    span {
+                                        display:inline-block;
+                                        font-size:12px;
+                        
+                                        @media (min-width: $screen-size-pc) {
+                                            font-size:18px;
+                                        } 
+
+                                        &::after {
+                                            content:"|";
+                                            color:#999;
+                                            font-size:10px;
+                                            padding:0 5px;
+                                            position:relative;
+                                            top:-2px;
+                        
+                                            @media (min-width: $screen-size-pc) {
+                                                font-size:15px;
+                                                padding:0 10px;
+                                            } 
+                                        }
+
+
+                                        &:nth-of-type(2) {
+                                            min-width:260px;
+                                        }
+                                        &:last-of-type {
+                                            &::after {
+                                                display:none;
+                                            }
+                                        }
+                                    }
+
+                                    strong {
+                                        display:block;
+                                        font-weight:500;
+                                        font-size:15px;
+                                        padding:5px 0 0;
+                        
+                                        @media (min-width: $screen-size-pc) {
+                                            display:inline-block;
+                                            font-size:22px;
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+
+
+                    }
+
+                    &.event-status {
+
+                        h4 {
+                            margin:0 0 30px;
+                            text-align:center;
+                            font-size:24px;
+                        
+                
+                            @media (min-width: $screen-size-pc) {
+                                font-size:36px;
+                                margin:0 0 50px;
+                            } 
+                        }
+
+                        p {
+                            margin:0 0 20px;
+                            font-size:17px;
+                            word-break:keep-all;
+                            font-weight:500;
+                        
+                
+                            @media (min-width: $screen-size-pc) {
+                                font-size:20px;
+                            } 
+
+                            span {
+                                display:block;
+                            }
+                        }
+
+
+                    }
+
+                    &.event-campaign {
+
+                        background:#BBE0F8;
+                        padding:30px 0;
+                
+                        @media (min-width: $screen-size-pc) {
+                            padding:128px;
+                            
+                        } 
+
+                        div.container {
+                            
+
+                            h4 {
+                                font-size:28px;
+                                margin:0 0 44px;
+                                font-weight:900;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:50px;
+                                    
+                                } 
+    
+                                small {
+                                    display:block;
+                                    font-size:inherit;
+                                }
+    
+                                span {
+                                    display:block;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        display:inline;
+                                        
+                                    } 
+                                }
+        
+                            }
+    
+                            div.box {
+                                position:relative;
+                                background:#fff;
+                                z-index:2;
+                                padding:30px 20px;
+                                @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.2);
+                
+                                @media (min-width: $screen-size-pc) {
+                                    padding:48px;
+                                    
+                                } 
+
+                                p {
+                                    position:relative;
+                                    margin:0 0 10px;
+                                    padding:0 0 0 14px;
+                                    font-weight:500;
+                                    font-size:16px;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        margin:0 0 20px;
+                                        font-size:28px;
+                                        padding:0 0 0 20px;
+                                        
+                                    } 
+
+                                    &::before {
+                                        content:"-";
+                                        position:absolute;
+                                        left:0;
+                                    }
+                                }
+
+                                span {
+                                    color:#207FB2;
+                                    font-size:12px;
+                                    padding:0 0 0 14px;
+                
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size:18px;
+                                        padding:0 0 0 20px;
+                                    } 
+
+                                }
+                            }
+
+                            &::after {
+                                content:"";
+                                display:block;
+                                position:absolute;
+                                top:96px;
+                                right:30px;
+                                width:134px;
+                                height:136px;
+                                background:url(../images/event-campaign-img.svg) no-repeat center / 100% auto;
+                
+                                @media (min-width: $screen-size-pc) {
+                                    width:360px;
+                                    height:366px;
+                                    top:0;
+                                } 
+                            }
+
+                        }
                     }
 
 

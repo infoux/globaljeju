@@ -15,7 +15,15 @@ $(function () {
 
     $(window).on("resize", function(){
 
+        if(windowW != $(window).width() || windowh != $(window).height()) {
+            location.reload();
+            return;
+          }
+
+
         $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
+
+
     });
     
 
@@ -24,20 +32,15 @@ $(function () {
 
 			var scrollY = $(document).scrollTop();
 
-			if (scrollY > "3") {
-				$(".main-layout #header").addClass("bg");
-                $(".main-layout #header h1 a").removeClass("white");
-
+			if (scrollY > "50") {
                 $(".sub-layout #header, .sub-layout div.sub-head, .sub-layout article.menu-depth2").addClass("fix");
 
 			} else {
-				$(".main-layout #header").removeClass("bg");
                 $(".sub-layout #header").removeClass("fix");
                 $(".sub-layout #header, .sub-layout div.sub-head, .sub-layout article.menu-depth2").removeClass("fix");
 
                 $("nav.sub-menu").removeClass("active");
 
-                $("sub.content-box").css("margin-top", $("div.sub-head").outerHeight());
             }
 
 		 });

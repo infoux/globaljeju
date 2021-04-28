@@ -4,22 +4,44 @@ $(function () {
 
 	var windowh = $(window).height();
 	var windowW = $(window).width();
+
+
+    $("div.content-box").css("padding-top", $("div.sub-head").outerHeight());
+
     
+    
+    
+    
+
+    $(window).on("resize", function(){
+
+        $("div.content-box").css("padding-top", $("div.sub-head").outerHeight());
+    });
+    
+
+
 		$(window).scroll(function(e) {
 
 			var scrollY = $(document).scrollTop();
 
 			if (scrollY > "2") {
-				$("#header").addClass("bg");
-                $("#header h1 a").removeClass("white");
+				$(".main-layout #header").addClass("bg");
+                $(".main-layout #header h1 a").removeClass("white");
+
+                $(".sub-layout #header, .sub-layout div.sub-head, .sub-layout article.menu-depth2").addClass("fix");
 
 			} else {
-				$("#header").removeClass("bg");
+				$(".main-layout #header").removeClass("bg");
+                $(".sub-layout #header").removeClass("fix");
+                $(".sub-layout #header, .sub-layout div.sub-head, .sub-layout article.menu-depth2").removeClass("fix");
 
+                $("nav.sub-menu").removeClass("active");
+
+                $("sub.content-box").css("padding-top", $("div.sub-head").outerHeight());
             }
 
 		 });
-
+         
 
 
          $("div.language button").on("click", function () {
@@ -35,6 +57,34 @@ $(function () {
         $("nav#main-menu button.close").on("click", function () {
             $("nav#main-menu").toggleClass("on");
         });
+
+
+        $("nav.sub-menu a.active").on("click", function (e) {
+
+            if ( (windowW < 1200) || ($("div.sub-head").hasClass("fix")) ) {
+                console.log("무야호");
+
+                $("nav.sub-menu").toggleClass("active");
+
+                e.preventDefault();
+            }
+
+        });
+
+
+        $("article.menu-depth3 a.active").on("click", function (e) {
+
+            if ( (windowW < 1200) || ($("div.sub-head").hasClass("fix")) ) {
+                console.log("무야호");
+
+                $("article.menu-depth3").toggleClass("on");
+
+                e.preventDefault();
+            }
+
+        });
+
+
 
 
 

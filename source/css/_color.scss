@@ -11,18 +11,41 @@ $color-gray: #1f222d;
 
 
 
-$theme-bg-color1 : #ccc;
-$theme-bg-color2 : #aaa;
-$theme-bg-color3 : #999;
+div#content.sub01 div.sub-head {
 
+    background:#74C8FF;
 
+    &.fix {
+        background:rgba(116,200,255, .8);
 
-div#content.sub01 {
-    background:$theme-bg-color1
+    }
 }
-div#content.sub02 {
-    background:$theme-bg-color2
+div#content.sub02 div.sub-head {
+
+    background:#91DCD2;
+
+    &.fix {
+        background:rgba(145,220,210, .8); 
+
+    }
 }
-div#content.sub03 {
-    background:$theme-bg-color3
+div#content.sub02 div.sub-head {
+
+    background:#88C46F;
+    
+
+    &.fix {
+        background:rgba(136,196,111, .8);
+
+    }
+}
+div#content.sub04 div.sub-head {
+
+    background:#FFCE48;
+    
+
+    &.fix {
+        background:rgba(255,206,72, .8);
+
+    }
 }

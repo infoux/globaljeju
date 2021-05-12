@@ -4000,6 +4000,15 @@ body div#content.sub div.content-box article.menu-depth3 {
   body div#content.sub div.content-box article.menu-depth3 div.container div.outline a.active {
     background: #fff;
   }
+  body div#content.sub div.content-box article.menu-depth3.normal {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+    padding: 30px 0 0;
+  }
+  body div#content.sub div.content-box article.menu-depth3.normal div.container {
+    width: 1200px;
+  }
   body div#content.sub div.content-box article.menu-depth3.sub01 div.container a::after {
     background-color: #3494d4;
   }

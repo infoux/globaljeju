@@ -2791,6 +2791,17 @@ body {
                                     }
                                 }
 
+                                &.normal {
+                                    position:static;
+                                    width:100%;
+                                    margin-left:0;
+                                    padding:30px 0 0;
+
+                                    div.container {
+                                        width:1200px;
+                                    }
+                                }
+
                                 &.sub01 {
                                     div.container {
                                         a {

@@ -9,23 +9,6 @@ $(function () {
 
 
 
-    // $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
-
-       
-    
-
-    // $(window).on("resize", function(){
-
-    //     if(windowW != $(window).width() || windowh != $(window).height()) {
-    //         location.reload();
-    //         return;
-    //       }
-
-
-    //     $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
-
-
-    // });
     
 
 

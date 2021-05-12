@@ -1816,6 +1816,120 @@ body {
 
             }
 
+            
+
+            section.campaign {
+                position:relative;
+
+                background:#BBE0F8;
+                padding:30px 0;
+        
+                @media (min-width: $screen-size-pc) {
+                    padding:128px;
+                    
+                } 
+
+                div.container-full {
+                    padding:20px;
+        
+                    @media (min-width: $screen-size-pc) {
+                        padding:100px 20px;
+                        
+                    } 
+                    
+
+                    h4 {
+                        font-size:28px;
+                        margin:0 0 44px;
+                        font-weight:900;
+        
+                        @media (min-width: $screen-size-pc) {
+                            font-size:50px;
+                            
+                        } 
+
+                        small {
+                            display:block;
+                            font-size:inherit;
+                        }
+
+                        span {
+                            display:block;
+        
+                            @media (min-width: $screen-size-pc) {
+                                display:inline;
+                                
+                            } 
+                        }
+
+                    }
+
+                    div.box {
+                        position:relative;
+                        background:#fff;
+                        z-index:2;
+                        padding:30px 20px;
+                        @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.2);
+        
+                        @media (min-width: $screen-size-pc) {
+                            padding:48px;
+                            
+                        } 
+
+                        p {
+                            position:relative;
+                            margin:0 0 10px;
+                            padding:0 0 0 14px;
+                            font-weight:500;
+                            font-size:16px;
+        
+                            @media (min-width: $screen-size-pc) {
+                                margin:0 0 20px;
+                                font-size:28px;
+                                padding:0 0 0 20px;
+                                
+                            } 
+
+                            &::before {
+                                content:"-";
+                                position:absolute;
+                                left:0;
+                            }
+                        }
+
+                        span {
+                            color:#207FB2;
+                            font-size:12px;
+                            padding:0 0 0 14px;
+        
+                            @media (min-width: $screen-size-pc) {
+                                font-size:18px;
+                                padding:0 0 0 20px;
+                            } 
+
+                        }
+                    }
+
+                    &::after {
+                        content:"";
+                        display:block;
+                        position:absolute;
+                        top:116px;
+                        right:30px;
+                        width:134px;
+                        height:136px;
+                        background:url(../images/event-campaign-img.svg) no-repeat center / 100% auto;
+        
+                        @media (min-width: $screen-size-pc) {
+                            width:360px;
+                            height:366px;
+                            top:0;
+                        } 
+                    }
+
+                }
+            }
+
 
 
 
@@ -2314,6 +2428,15 @@ body {
                         padding:100px 0 0;
                         
                     } 
+
+                    &:last-of-type {
+                        padding-bottom:50px;
+                
+                        @media (min-width: $screen-size-pc) {
+                            padding-bottom:100px;
+                            
+                        } 
+                    }
 
                     
 
@@ -3210,111 +3333,6 @@ body {
                         }
 
 
-                    }
-
-                    &.event-campaign {
-
-                        background:#BBE0F8;
-                        padding:30px 0;
-                
-                        @media (min-width: $screen-size-pc) {
-                            padding:128px;
-                            
-                        } 
-
-                        div.container {
-                            
-
-                            h4 {
-                                font-size:28px;
-                                margin:0 0 44px;
-                                font-weight:900;
-                
-                                @media (min-width: $screen-size-pc) {
-                                    font-size:50px;
-                                    
-                                } 
-    
-                                small {
-                                    display:block;
-                                    font-size:inherit;
-                                }
-    
-                                span {
-                                    display:block;
-                
-                                    @media (min-width: $screen-size-pc) {
-                                        display:inline;
-                                        
-                                    } 
-                                }
-        
-                            }
-    
-                            div.box {
-                                position:relative;
-                                background:#fff;
-                                z-index:2;
-                                padding:30px 20px;
-                                @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.2);
-                
-                                @media (min-width: $screen-size-pc) {
-                                    padding:48px;
-                                    
-                                } 
-
-                                p {
-                                    position:relative;
-                                    margin:0 0 10px;
-                                    padding:0 0 0 14px;
-                                    font-weight:500;
-                                    font-size:16px;
-                
-                                    @media (min-width: $screen-size-pc) {
-                                        margin:0 0 20px;
-                                        font-size:28px;
-                                        padding:0 0 0 20px;
-                                        
-                                    } 
-
-                                    &::before {
-                                        content:"-";
-                                        position:absolute;
-                                        left:0;
-                                    }
-                                }
-
-                                span {
-                                    color:#207FB2;
-                                    font-size:12px;
-                                    padding:0 0 0 14px;
-                
-                                    @media (min-width: $screen-size-pc) {
-                                        font-size:18px;
-                                        padding:0 0 0 20px;
-                                    } 
-
-                                }
-                            }
-
-                            &::after {
-                                content:"";
-                                display:block;
-                                position:absolute;
-                                top:96px;
-                                right:30px;
-                                width:134px;
-                                height:136px;
-                                background:url(../images/event-campaign-img.svg) no-repeat center / 100% auto;
-                
-                                @media (min-width: $screen-size-pc) {
-                                    width:360px;
-                                    height:366px;
-                                    top:0;
-                                } 
-                            }
-
-                        }
                     }
 
                     &.event-program-head {

@@ -22,6 +22,23 @@ $(function () {
 
 
 
+    $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
+
+       
+    
+
+    $(window).on("resize", function(){
+
+        if(windowW != $(window).width() || windowh != $(window).height()) {
+            location.reload();
+            return;
+          }
+
+
+        $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
+
+
+    });
 
 
 
@@ -309,8 +326,8 @@ $(function () {
 
 
 
-        $('.map-wall').plaxify({"xRange":60,"yRange":60});
-        $.plax.enable();
+        // $('.map-wall').plaxify({"xRange":60,"yRange":60});
+        // $.plax.enable();
 
 
 

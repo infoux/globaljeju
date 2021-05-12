@@ -6,25 +6,26 @@ $(function () {
 	var windowW = $(window).width();
 
 
-    $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
 
+
+
+    // $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
+
+       
     
-    
-    
-    
 
-    $(window).on("resize", function(){
+    // $(window).on("resize", function(){
 
-        if(windowW != $(window).width() || windowh != $(window).height()) {
-            location.reload();
-            return;
-          }
+    //     if(windowW != $(window).width() || windowh != $(window).height()) {
+    //         location.reload();
+    //         return;
+    //       }
 
 
-        $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
+    //     $("div.content-box").css("margin-top", $("div.sub-head").outerHeight());
 
 
-    });
+    // });
     
 
 
@@ -62,30 +63,34 @@ $(function () {
         });
 
 
-        $("nav.sub-menu a.active").on("click", function (e) {
+        $("nav.navi button").on("click", function () {
+            $("nav.navi").toggleClass("active");
+        });
 
-            if ( (windowW < 1200) || ($("div.sub-head").hasClass("fix")) ) {
-                console.log("무야호");
+        $(".menu-depth3 button").on("click", function () {
+            $(".menu-depth3").toggleClass("active");
+        });
+
+
+
+        $("nav.sub-menu button").on("click", function (e) {
 
                 $("nav.sub-menu").toggleClass("active");
 
-                e.preventDefault();
-            }
-
         });
 
 
-        $("article.menu-depth3 a.active").on("click", function (e) {
+        // $("article.menu-depth3 a.active").on("click", function (e) {
 
-            if ( (windowW < 1200) || ($("div.sub-head").hasClass("fix")) ) {
-                console.log("무야호");
+        //     if ( (windowW < 1200) || ($("div.sub-head").hasClass("fix")) ) {
+        //         console.log("무야호");
 
-                $("article.menu-depth3").toggleClass("on");
+        //         $("article.menu-depth3").toggleClass("on");
 
-                e.preventDefault();
-            }
+        //         e.preventDefault();
+        //     }
 
-        });
+        // });
 
 
 

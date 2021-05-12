@@ -4602,12 +4602,12 @@ body div#content.sub div.content-box article.event-program-head div.container di
 }
 
 body div#content.sub div.content-box article.event-program-list {
-  padding: 20px 0;
+  padding: 20px 0 0;
 }
 
 @media (min-width: 1200px) {
   body div#content.sub div.content-box article.event-program-list {
-    padding: 20px 0 40px;
+    padding: 20px 0 0;
   }
 }
 
@@ -4688,6 +4688,27 @@ body div#content.sub div.content-box article.event-program-list ul.list li a p.n
 
 body div#content.sub div.content-box article.event-program-list ul.list li a p.name strong {
   padding: 0 10px 0 0;
+}
+
+body div#content.sub div.content-box article.event-program-list ul.list li:last-of-type a {
+  margin: 0 0 20px;
+}
+
+body div#content.sub div.content-box article.event-detail-li {
+  padding: 20px 0;
+}
+
+body div#content.sub div.content-box article.event-detail-li h4 {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  color: #1B0662;
+  font-weight: 500;
+}
+
+body div#content.sub div.content-box article.event-detail-li h5 {
+  font-size: 15px;
+  font-weight: 500;
 }
 
 body div#content.sub div.content-box article.event-navi-btns {

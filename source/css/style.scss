@@ -3478,10 +3478,10 @@ body {
                     }
                     
                     &.event-program-list {
-                        padding:20px 0;
+                        padding:20px 0 0;
                 
                         @media (min-width: $screen-size-pc) {
-                            padding:20px 0 40px;
+                            padding:20px 0 0;
                             
                         } 
 
@@ -3502,7 +3502,6 @@ body {
                                     @media (min-width: $screen-size-pc) {
                                         padding:55px 55px 55px 265px;
                                         min-height:250px;
-                                        
                                     } 
                 
 
@@ -3562,7 +3561,32 @@ body {
                                         }
                                     }
                                 }
+
+                                
+
+                                &:last-of-type {
+                                    a {
+                                        margin:0 0 20px;
+                                    }
+                                }
                             }
+                        }
+                    }
+
+                    &.event-detail-li {
+                        padding:20px 0;
+
+                        h4 {
+                            text-align:center;
+                            margin:0;
+                            font-size:18px;
+                            color:#1B0662;
+                            font-weight:500;
+                        }
+
+                        h5 {
+                            font-size: 15px;
+                            font-weight:500;
                         }
                     }
 

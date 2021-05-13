@@ -87,6 +87,14 @@ $(function () {
         });
 
 
+        $('.event-additional-program li div.photo').each(function () {
+            $(this).css(
+                "background",
+                "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            );
+        });
+
+
         var $popStatus = $('.pagingInfo');
         var $popSlickElement = $('.outsite-slider div.slider')
     
@@ -136,6 +144,50 @@ $(function () {
             
         });
 
+
+        var $eventDetailPhoto = $('.event-detail-photo div.slider');
+
+
+    
+    
+        $eventDetailPhoto.slick({  
+            mobileFirst: true,
+            autoplay:true,
+            speed: 1000,
+            dots: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            adaptiveHeight: true,
+            nextArrow:$('.event-detail-photo button.right'),
+            prevArrow:$('.event-detail-photo button.left'),
+    
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        variableWidth:true,
+                        dotsClass: 'custom_paging',
+                        customPaging: function (slider, i) {
+                            //FYI just have a look at the object to find available information
+                            //press f12 to access the console in most browsers
+                            //you could also debug or look in the source
+                            var slideNumber   = (i + 1),
+                                totalSlides = slider.slideCount;
+                            return '<a class="custom-dot" role="button" title="' + slideNumber + ' of ' + totalSlides + '"><span class="string">' + slideNumber + '</span></a>';
+                        }
+    
+                    }
+                }
+            ]
+    
+            
+            
+        });
 
 
 

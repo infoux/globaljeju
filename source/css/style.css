@@ -3488,27 +3488,6 @@ body div#content.sub div.sub-head article.event-navi div.container a.button {
   }
 }
 
-body div#content.sub div.sub-head article.sub-title {
-  display: none;
-}
-
-@media (min-width: 1200px) {
-  body div#content.sub div.sub-head article.sub-title {
-    display: block;
-    text-align: center;
-  }
-}
-
-body div#content.sub div.sub-head article.sub-title div.container {
-  text-align: center;
-}
-
-body div#content.sub div.sub-head article.sub-title div.container h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 20px 0 10px;
-}
-
 body div#content.sub div.sub-head .waves {
   position: absolute;
   top: 0;
@@ -3748,6 +3727,34 @@ body div#content.sub div.content-box article:last-of-type {
 @media (min-width: 1200px) {
   body div#content.sub div.content-box article:last-of-type {
     padding-bottom: 100px;
+  }
+}
+
+body div#content.sub div.content-box article.sub-title {
+  padding: 30px 0 20px;
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.sub-title {
+    padding: 50px 0 30px;
+  }
+}
+
+body div#content.sub div.content-box article.sub-title div.container {
+  text-align: center;
+}
+
+body div#content.sub div.content-box article.sub-title div.container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.sub-title div.container h2 {
+    font-size: 36px;
   }
 }
 
@@ -7223,6 +7230,32 @@ body div#content.sub div.content-box article.expat-type02 div.container div.outl
   }
 }
 
+body div#content.sub div.content-box article.sign-agree {
+  padding: 30px 0;
+}
+
+body div#content.sub div.content-box article.sign-agree div.container div.outline {
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  padding: 15px;
+  height: 180px;
+  overflow-y: scroll;
+  margin: 0 0 20px;
+}
+
+body div#content.sub div.content-box article.sign-agree div.container input {
+  position: relative;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+body div#content.sub div.content-box article.sign-agree div.container label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 body div#content.sub div.content-box article.register-form dl {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
@@ -7555,7 +7588,8 @@ body div#content.sub div.content-box article.register-form dl dd button.calc {
   border-color: #456500;
 }
 
-body div#content.sub div.content-box article.register-form dl dd input[type="radio"] {
+body div#content.sub div.content-box article.register-form dl dd input[type="radio"],
+body div#content.sub div.content-box article.register-form dl dd input[type="checkbox"] {
   display: none;
 }
 

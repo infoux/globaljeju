@@ -5097,6 +5097,167 @@ body {
 
                     }
 
+                    &.photo-category-list {
+                        padding:20px 0 0;
+
+                        div.container {
+
+
+                            ul.list {
+                                list-style:none;
+                                margin:0;
+                                padding:0;
+                                font-size:0;
+
+                                li {
+                                    position:relative;
+                                    text-align:center;
+                                    margin:0 0 50px;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        display:inline-block;
+                                        width:calc((100% - 81px) / 2);
+                                        margin:0 0 100px;
+
+                                        &:nth-child(odd) {
+                                            margin-right:80px;
+                                        }
+
+                                    }
+
+                                    a {
+                                        display:block;
+
+                                        p.image {
+                                            margin:0;
+                                            width:100%;
+                                            padding-top:66%;
+                                            background:#ccc;
+                                            margin:0;
+    
+                                            img {
+                                                display:none;
+                                            }
+                                        }
+    
+                                        h5 {
+                                            position:absolute;
+                                            bottom:-10px;
+                                            left:15px;
+                                            right:15px;
+                                            margin:0;
+                                            padding:32px 10px;
+                                            background:#fff;
+                                            font-size:26px;
+                                            font-weight:600;
+                                            word-break:keep-all;
+                                            @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.3);
+        
+
+                                            @media (min-width: $screen-size-pc) {
+                                                font-size:22px;
+                                            }
+        
+                                        }
+    
+                                        p.date {
+                                            margin:0;
+                                            font-size:14px;
+                                            color:#555;
+
+                                            @media (min-width: $screen-size-pc) {
+                                                font-size:18px;
+                                            }
+    
+                                        }
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    &.photo-arrow {
+                        padding:0 0 60px;
+                        margin-top:-10px;
+
+                        @media (min-width: $screen-size-pc) {
+                            margin-top:-30px;
+                        }
+
+                        div.container {
+                            text-align:center;
+                            font-size:0;
+
+                            a {
+                                display:inline-block;
+                                margin:0 10px;
+
+                                i {
+                                    font-size:32px;
+                                    width:50px;
+                                    line-height:50px;
+                                    text-align:center;
+                                    @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.3);
+                                }
+                            }
+                        }
+                    }
+
+                    &.photo-wall {
+                        background:#C9C9C9;
+
+                        div.container {
+
+                            div.wall {
+                                
+                                div.item {
+
+                                    display:inline-block;
+                                    width:280px;
+                                    font-size:0;
+                                    @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.3);
+
+                                    a {
+                                        display:block;
+                                    
+                                        img {
+                                            width:100%;
+                                        }
+    
+                                        h5 {
+                                            display:none;
+                                            background:rgba(255,255,255,0.5);
+                                            position:absolute;
+                                            left:0;
+                                            right:0;
+                                            top:0;
+                                            bottom:0;
+                                            margin:0;
+                                            text-align:center;
+                                            padding:30% 0 0;
+                                            font-size:18px;
+
+                                            @media (min-width: $screen-size-pc) {
+                                                font-size:24px;
+                                            }
+    
+                                        }
+
+                                        &:hover {
+
+                                            h5 {
+                                                display:block;
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
 
 
 

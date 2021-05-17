@@ -6321,6 +6321,157 @@ body div#content.sub div.content-box article.mov-list div.container ul.list li a
   }
 }
 
+body div#content.sub div.content-box article.photo-category-list {
+  padding: 20px 0 0;
+}
+
+body div#content.sub div.content-box article.photo-category-list div.container ul.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+body div#content.sub div.content-box article.photo-category-list div.container ul.list li {
+  position: relative;
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.photo-category-list div.container ul.list li {
+    display: inline-block;
+    width: calc((100% - 81px) / 2);
+    margin: 0 0 100px;
+  }
+  body div#content.sub div.content-box article.photo-category-list div.container ul.list li:nth-child(odd) {
+    margin-right: 80px;
+  }
+}
+
+body div#content.sub div.content-box article.photo-category-list div.container ul.list li a {
+  display: block;
+}
+
+body div#content.sub div.content-box article.photo-category-list div.container ul.list li a p.image {
+  margin: 0;
+  width: 100%;
+  padding-top: 66%;
+  background: #ccc;
+  margin: 0;
+}
+
+body div#content.sub div.content-box article.photo-category-list div.container ul.list li a p.image img {
+  display: none;
+}
+
+body div#content.sub div.content-box article.photo-category-list div.container ul.list li a h5 {
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+  right: 15px;
+  margin: 0;
+  padding: 32px 10px;
+  background: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  word-break: keep-all;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.photo-category-list div.container ul.list li a h5 {
+    font-size: 22px;
+  }
+}
+
+body div#content.sub div.content-box article.photo-category-list div.container ul.list li a p.date {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.photo-category-list div.container ul.list li a p.date {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub div.content-box article.photo-arrow {
+  padding: 0 0 60px;
+  margin-top: -10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.photo-arrow {
+    margin-top: -30px;
+  }
+}
+
+body div#content.sub div.content-box article.photo-arrow div.container {
+  text-align: center;
+  font-size: 0;
+}
+
+body div#content.sub div.content-box article.photo-arrow div.container a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+body div#content.sub div.content-box article.photo-arrow div.container a i {
+  font-size: 32px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+body div#content.sub div.content-box article.photo-wall {
+  background: #C9C9C9;
+}
+
+body div#content.sub div.content-box article.photo-wall div.container div.wall div.item {
+  display: inline-block;
+  width: 280px;
+  font-size: 0;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+body div#content.sub div.content-box article.photo-wall div.container div.wall div.item a {
+  display: block;
+}
+
+body div#content.sub div.content-box article.photo-wall div.container div.wall div.item a img {
+  width: 100%;
+}
+
+body div#content.sub div.content-box article.photo-wall div.container div.wall div.item a h5 {
+  display: none;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  text-align: center;
+  padding: 30% 0 0;
+  font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.photo-wall div.container div.wall div.item a h5 {
+    font-size: 24px;
+  }
+}
+
+body div#content.sub div.content-box article.photo-wall div.container div.wall div.item a:hover h5 {
+  display: block;
+}
+
 body div#content.sub div.content-box article.board-tools {
   padding: 0;
   position: relative;

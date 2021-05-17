@@ -103,6 +103,15 @@ $(function () {
     });
 
 
+    $('.photo-category-list p.image').each(function () {
+        $(this).css(
+            "background",
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+        );
+    });
+
+
+
     var $popStatus = $('.pagingInfo');
     var $popSlickElement = $('.outsite-slider div.slider')
 
@@ -167,6 +176,28 @@ $(function () {
     });
 
     wall.fitWidth();
+
+
+
+
+    var wall2 = new Freewall(".photo-wall .wall");
+    wall2.reset({
+        selector: '.item',
+        animate: true,
+        cellW: 200,
+        cellH: 'auto',
+        gutterX: 30,
+        gutterY: 30,
+        onResize: function() {
+            wall2.fitWidth();
+        }
+    });
+
+    wall2.fitWidth();
+
+
+
+
 
 
     var $eventDetailPhoto = $('.event-detail-photo div.slider');

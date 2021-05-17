@@ -6504,6 +6504,12 @@ body div#content.sub div.content-box article.photo-view div.container div.big h4
   margin: 0 0 20px;
 }
 
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.photo-view div.container div.big h4 {
+    font-size: 44px;
+  }
+}
+
 body div#content.sub div.content-box article.photo-view div.container div.big img {
   width: 100%;
 }
@@ -6513,6 +6519,12 @@ body div#content.sub div.content-box article.photo-view div.container div.big p.
   color: #fff;
   text-align: left;
   font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.photo-view div.container div.big p.text {
+    font-size: 22px;
+  }
 }
 
 body div#content.sub div.content-box article.photo-view div.container div.big p.text strong {

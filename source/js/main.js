@@ -45,14 +45,14 @@ $(function () {
     $('.main-image li').each(function () {
         $(this).css(
             "background",
-            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
         );
     });
 
     $('.gallery li').each(function () {
         $(this).css(
             "background",
-            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
         );
     });
 

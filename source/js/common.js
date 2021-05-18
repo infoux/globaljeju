@@ -29,10 +29,39 @@ $(function () {
 
     });
 
+    $("article.history-navi i:first-of-type").addClass("off");
+
+    $("article.history-navi .outline").on("scroll", function () {
+        if ($(this).scrollLeft() == 0) {
+            $(this).parent().find(".bx-chevron-left").addClass("off");
+        } else {
+            $(this).parent().find(".bx-chevron-left").removeClass("off");
+
+        }
+
+        if ($(this).find("button:last-of-type").offset().left + $(this).find("button").width() + 25 < $(window).width()) {
+            $(this).parent().find(".bx-chevron-right").addClass("off");
+        } else {
+            $(this).parent().find(".bx-chevron-right").removeClass("off");
+
+        }
+    });
 
 
     $("div.language button").on("click", function () {
         $("div.language").toggleClass("on");
+    });
+
+
+    $("article.history-navi button").on("click", function () {
+
+        $("article.history-navi button").removeClass("active");
+        $(this).addClass("active");
+
+        $("article.history div.container div").removeClass("active");
+
+        $("article.history div.container div.year"+ $(this).attr("data")).addClass("active");
+
     });
 
 
@@ -110,6 +139,19 @@ $(function () {
         );
     });
 
+
+    $("div.find-form").last().hide();
+
+    var radioContent = $("div.find-form");
+
+
+    $("div.find-type input[type='radio']").click(function() {
+
+        radioContent.hide();
+        radioContent.eq($("input[type='radio']").index(this)).show();
+
+
+    });
 
 
     var $popStatus = $('.pagingInfo');

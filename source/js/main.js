@@ -63,85 +63,98 @@ $(function () {
     }
 
 
-    if (windowW > 1200) {
-        $.scrollify({
-
-            section: ".fullpage",
-            scrollbars:false,
-            interstitialSection: "#footer",
-            before: function (i, panels) {
-                var ref = panels[i].attr("data-section-name");
-
-
-                panels[i].find(".gallery0,.gallery1,.gallery2").addClass("moved");
-
-                if (ref === "EVENT") {
-                    $("#header").removeClass("black");
-
-                // $("section.main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
-
-                }
-                
-                if (ref === "MAIN") {
-                    $("#header").removeClass("black");
-
-                // $("section.main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
-
-                }
-                if (ref === "COMMUNITY") {
-                    $("#header").addClass("black");
-
-                    // $(".ios7 .content").removeClass("moved");
-                    initialPosition();
-
-                }
-                if (ref === "MAP") {
-                    $("#header").addClass("black");
-                    // $(".ios7 .content").addClass("moved");
-                    $(".ios7 .gallery0").css("top", 0);
-                    
-                }
-            },
-            after: function (i, panels) {
-                var ref = panels[i].attr("data-section-name");
-
-                if (ref === "EVENT") {
-                    $("#header h1 a").addClass("white");
-                    // $(".main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
-                }
-                for (var j = 0; j < panels.length; j++) {
-                    if (j > i) {
-
-                        //panels[j].find(".moved").removeClass("moved");
-                    }
-                }
-            },
-            afterResize: initialPosition,
-            afterRender: initialPosition
+        $('#content').fullpage({
+            responsiveWidth: 1200,
+            
+		fixedElements: '#header, #footer'
+            
         });
-    }
 
 
 
 
 
-    function initialPosition() {
 
-        var current = $
-            .scrollify
-            .current();
 
-        // if (current.hasClass("ios7") === false) {
-        //     var height = parseInt($(".ios7").height());
-        //     var f = parseInt($(".features .gallery1").height()) - 50;
+    // if (windowW > 1200) {
+    //     $.scrollify({
 
-        //     var top = 0 - (height * 0.4) - (height - f);
-        //     $(".ios7 .gallery0").css("top", top);
-        // } else {
-        //     $("section.main").find(".gallery0,.gallery1,.gallery2").addClass("moved");
-        // }
+    //         section: ".fullpage",
+    //         scrollbars:false,
+    //         interstitialSection: "#footer",
+    //         before: function (i, panels) {
+    //             var ref = panels[i].attr("data-section-name");
 
-    }
+
+    //             panels[i].find(".gallery0,.gallery1,.gallery2").addClass("moved");
+
+    //             if (ref === "EVENT") {
+    //                 $("#header").removeClass("black");
+
+    //             // $("section.main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
+
+    //             }
+                
+    //             if (ref === "MAIN") {
+    //                 $("#header").removeClass("black");
+
+    //             // $("section.main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
+
+    //             }
+    //             if (ref === "COMMUNITY") {
+    //                 $("#header").addClass("black");
+
+    //                 // $(".ios7 .content").removeClass("moved");
+    //                 initialPosition();
+
+    //             }
+    //             if (ref === "MAP") {
+    //                 $("#header").addClass("black");
+    //                 // $(".ios7 .content").addClass("moved");
+    //                 $(".ios7 .gallery0").css("top", 0);
+                    
+    //             }
+    //         },
+    //         after: function (i, panels) {
+    //             var ref = panels[i].attr("data-section-name");
+
+    //             if (ref === "EVENT") {
+    //                 $("#header h1 a").addClass("white");
+    //                 // $(".main").find(".gallery0,.gallery1,.gallery2").removeClass("moved");
+    //             }
+    //             for (var j = 0; j < panels.length; j++) {
+    //                 if (j > i) {
+
+    //                     //panels[j].find(".moved").removeClass("moved");
+    //                 }
+    //             }
+    //         },
+    //         afterResize: initialPosition,
+    //         afterRender: initialPosition
+    //     });
+    // }
+
+
+
+
+
+    // function initialPosition() {
+
+    //     var current = $
+    //         .scrollify
+    //         .current();
+
+    //     // if (current.hasClass("ios7") === false) {
+    //     //     var height = parseInt($(".ios7").height());
+    //     //     var f = parseInt($(".features .gallery1").height()) - 50;
+
+    //     //     var top = 0 - (height * 0.4) - (height - f);
+    //     //     $(".ios7 .gallery0").css("top", top);
+    //     // } else {
+    //     //     $("section.main").find(".gallery0,.gallery1,.gallery2").addClass("moved");
+    //     // }
+
+    // }
 
 
 

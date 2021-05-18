@@ -111,7 +111,7 @@ $(function () {
     $('.event-program-list li p.image').each(function () {
         $(this).css(
             "background",
-            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
         );
     });
 
@@ -119,15 +119,33 @@ $(function () {
     $('.event-additional-program li div.photo').each(function () {
         $(this).css(
             "background",
-            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
         );
     });
+
+
+    $('.photo-view .big p.image').each(function () {
+        $(this).css(
+            "background",
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
+        );
+    });
+
+
+    $('.photo-view .thumb li a').each(function () {
+        $(this).css(
+            "background",
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
+        );
+    });
+
+
 
 
     $('.mov-list p.image').each(function () {
         $(this).css(
             "background",
-            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
         );
     });
 
@@ -135,7 +153,7 @@ $(function () {
     $('.photo-category-list p.image').each(function () {
         $(this).css(
             "background",
-            "url('" + $(this).find("img").attr("src") + "') no-repeat center top / cover"
+            "url('" + $(this).find("img").attr("src") + "') no-repeat center / cover"
         );
     });
 

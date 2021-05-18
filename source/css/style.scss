@@ -5484,10 +5484,15 @@ body {
                                     }
                                 }
 
-                                img {
+                                p.image {
                                     width:100%;
-                                }
+                                    padding-top:74%;
 
+                                    img {
+                                        display:none;
+                                    }
+    
+                                }
                                 p.text {
                                     margin:20px 0 0;
                                     color:#fff;
@@ -5538,16 +5543,17 @@ body {
                                     @media (min-width: $screen-size-pc) {
                                         display:block;
                                         margin:0 0 20px 0;
-                                        width:330px;
+                                        width:auto;
                                     }
 
                                     a {
                                         display:block;
                                         opacity:0.33;
                                         border:1px solid #818181;
+                                        padding-top: 64%;
 
                                         img {
-                                            width:100%;
+                                            display:none;
                                         }
 
                                         &:hover {

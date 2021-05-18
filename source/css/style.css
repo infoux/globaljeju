@@ -6694,8 +6694,13 @@ body div#content.sub div.content-box article.photo-view div.container div.big h4
   }
 }
 
-body div#content.sub div.content-box article.photo-view div.container div.big img {
+body div#content.sub div.content-box article.photo-view div.container div.big p.image {
   width: 100%;
+  padding-top: 74%;
+}
+
+body div#content.sub div.content-box article.photo-view div.container div.big p.image img {
+  display: none;
 }
 
 body div#content.sub div.content-box article.photo-view div.container div.big p.text {
@@ -6753,7 +6758,7 @@ body div#content.sub div.content-box article.photo-view div.container ul li {
   body div#content.sub div.content-box article.photo-view div.container ul li {
     display: block;
     margin: 0 0 20px 0;
-    width: 330px;
+    width: auto;
   }
 }
 
@@ -6761,10 +6766,11 @@ body div#content.sub div.content-box article.photo-view div.container ul li a {
   display: block;
   opacity: 0.33;
   border: 1px solid #818181;
+  padding-top: 64%;
 }
 
 body div#content.sub div.content-box article.photo-view div.container ul li a img {
-  width: 100%;
+  display: none;
 }
 
 body div#content.sub div.content-box article.photo-view div.container ul li a:hover {

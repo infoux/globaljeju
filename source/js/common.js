@@ -221,7 +221,7 @@ $(function () {
 
     });
 
-
+try {
     var wall = new Freewall(".expat-type01 .outline");
     wall.reset({
         selector: '.item',
@@ -255,6 +255,8 @@ $(function () {
 
     wall2.fitWidth();
 
+
+} catch(e) {}
 
 
 

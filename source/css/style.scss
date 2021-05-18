@@ -838,6 +838,15 @@ body {
         /* MAIN */
         &.main {
 
+            
+            @media (max-width: $screen-size-pc - 1) {
+	            .fp-section, .fp-tableCell {
+                    height: auto !important;
+                }
+            }
+
+
+            
             div.container-full {
                 padding:100px 20px;
                 z-index:10;
@@ -870,11 +879,12 @@ body {
 
                 .container-full {
                     z-index:10;
-                    position:relative;
                     height:100vh;
+                    position:relative;
 
                     @media (min-width: $screen-size-pc) {
                         height:auto;
+                        position:absolute;
                     }
 
                     h3 {
@@ -1246,7 +1256,7 @@ body {
                     left:0;
                     right:0;
                     top:50%;
-                    transform:translateY(-80%);
+                    transform:translateY(-50%);
                     z-index:20;
                     text-align:center;
                     height:auto;
@@ -1427,7 +1437,6 @@ body {
 
             section.community {
                 position:relative;
-                min-height:100vh;
 
                 .container-full {
 
@@ -1991,7 +2000,7 @@ body {
                 padding:30px 0;
 
                 @media (min-width: $screen-size-pc) {
-                    padding:128px;
+                    padding:0;
 
                 }
 
@@ -7591,7 +7600,7 @@ body {
                     overflow: hidden;
                     position: relative;
 
-                    div.slide {
+                    div.slides {
                         display: inline-block;
                         padding: 0 40px;
                         vertical-align: top;
@@ -7662,7 +7671,7 @@ body {
         }
 
 
-        &>.container {
+        .container.outline {
             color:#B1B1B1;
             font-size:12px;
             text-align:center;

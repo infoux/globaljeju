@@ -2169,6 +2169,12 @@ body div#content section.find-id div.container fieldset div.result span strong {
   color: #1c7cc2;
 }
 
+@media (max-width: 1199px) {
+  body div#content.main .fp-section, body div#content.main .fp-tableCell {
+    height: auto !important;
+  }
+}
+
 body div#content.main div.container-full {
   padding: 100px 20px;
   z-index: 10;
@@ -2205,13 +2211,14 @@ body div#content.main section.event::after {
 
 body div#content.main section.event .container-full {
   z-index: 10;
-  position: relative;
   height: 100vh;
+  position: relative;
 }
 
 @media (min-width: 1200px) {
   body div#content.main section.event .container-full {
     height: auto;
+    position: absolute;
   }
 }
 
@@ -2557,8 +2564,8 @@ body div#content.main section.main .container {
   left: 0;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-80%);
-          transform: translateY(-80%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 20;
   text-align: center;
   height: auto;
@@ -2732,7 +2739,6 @@ body div#content.main section.main div.links a:nth-of-type(4)::before {
 
 body div#content.main section.community {
   position: relative;
-  min-height: 100vh;
 }
 
 @media (min-width: 1200px) {
@@ -3258,7 +3264,7 @@ body div#content.main section.campaign {
 
 @media (min-width: 1200px) {
   body div#content.main section.campaign {
-    padding: 128px;
+    padding: 0;
   }
 }
 
@@ -8820,40 +8826,40 @@ body footer#footer div.outsite-slider div.container div.slider {
   position: relative;
 }
 
-body footer#footer div.outsite-slider div.container div.slider div.slide {
+body footer#footer div.outsite-slider div.container div.slider div.slides {
   display: inline-block;
   padding: 0 40px;
   vertical-align: top;
 }
 
 @media (min-width: 1200px) {
-  body footer#footer div.outsite-slider div.container div.slider div.slide {
+  body footer#footer div.outsite-slider div.container div.slider div.slides {
     padding: 0 16px;
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
   }
 }
 
-body footer#footer div.outsite-slider div.container div.slider div.slide a {
+body footer#footer div.outsite-slider div.container div.slider div.slides a {
   display: block;
   color: #D5D5D5;
   text-align: center;
 }
 
 @media (min-width: 1200px) {
-  body footer#footer div.outsite-slider div.container div.slider div.slide a {
+  body footer#footer div.outsite-slider div.container div.slider div.slides a {
     font-size: 0;
   }
 }
 
-body footer#footer div.outsite-slider div.container div.slider div.slide a img {
+body footer#footer div.outsite-slider div.container div.slider div.slides a img {
   display: none;
   width: 152px;
   height: 46px;
 }
 
 @media (min-width: 1200px) {
-  body footer#footer div.outsite-slider div.container div.slider div.slide a img {
+  body footer#footer div.outsite-slider div.container div.slider div.slides a img {
     display: block;
   }
 }
@@ -8890,7 +8896,7 @@ body footer#footer div.outsite-slider div.container button.arrow.right {
   right: 10px;
 }
 
-body footer#footer > .container {
+body footer#footer .container.outline {
   color: #B1B1B1;
   font-size: 12px;
   text-align: center;
@@ -8898,19 +8904,19 @@ body footer#footer > .container {
 }
 
 @media (min-width: 1200px) {
-  body footer#footer > .container {
+  body footer#footer .container.outline {
     text-align: left;
     font-size: 14px;
     padding-left: 170px;
   }
 }
 
-body footer#footer > .container h2 {
+body footer#footer .container.outline h2 {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  body footer#footer > .container h2 {
+  body footer#footer .container.outline h2 {
     display: block;
     position: absolute;
     left: 0;
@@ -8923,22 +8929,22 @@ body footer#footer > .container h2 {
   }
 }
 
-body footer#footer > .container ul {
+body footer#footer .container.outline ul {
   list-style: none;
   margin: 0 0 20px;
   padding: 0;
 }
 
-body footer#footer > .container ul li {
+body footer#footer .container.outline ul li {
   display: inline-block;
 }
 
-body footer#footer > .container ul li a {
+body footer#footer .container.outline ul li a {
   display: block;
   color: #B1B1B1;
 }
 
-body footer#footer > .container ul li a::after {
+body footer#footer .container.outline ul li a::after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -8947,25 +8953,25 @@ body footer#footer > .container ul li a::after {
   margin: 0 10px;
 }
 
-body footer#footer > .container ul li:last-child a::after {
+body footer#footer .container.outline ul li:last-child a::after {
   display: none;
 }
 
-body footer#footer > .container address {
+body footer#footer .container.outline address {
   font-style: normal;
 }
 
-body footer#footer > .container address p {
+body footer#footer .container.outline address p {
   margin: 0 0 6px;
 }
 
-body footer#footer > .container address p span {
+body footer#footer .container.outline address p span {
   display: block;
   word-break: keep-all;
 }
 
 @media (min-width: 1200px) {
-  body footer#footer > .container address p span {
+  body footer#footer .container.outline address p span {
     display: inline;
   }
 }

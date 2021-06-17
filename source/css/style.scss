@@ -1154,7 +1154,7 @@ body {
                 position:relative;
                 width:100%;
                 overflow:hidden;
-                padding:100px 0;
+                padding:0;
                 background:#efefef;
                 min-height:100vh;
 
@@ -2135,6 +2135,10 @@ body {
                     padding-top:132px;
                 }
 
+                &.fix {
+                    @include drop-shadow($x:3px ,$y: 3px, $blur: 5px, $spread: 0, $alpha: 0.3);
+                }
+
                 &::before {
                     content:"";
                     display:block;
@@ -2634,18 +2638,22 @@ body {
                         padding:20px 0 50px;
 
                         p.info {
-                            font-size: 0;
-                            margin: 0;
+                            font-size: 16px;
+                            margin: 0 0 20px;
 
                             @media (min-width: $screen-size-pc) {
                                 font-size: 20px;
                                 text-align: center;
                                 margin: 0 0 30px;
+                            }
 
-                                strong {
-                                    display: block;
-                                    font-weight: 400;
+                            span {
+                                display:block;
+
+                                @media (min-width: $screen-size-pc) {
+                                    display:inline;
                                 }
+
                             }
                             //
                             //&::before {
@@ -2668,16 +2676,97 @@ body {
                         fieldset {
                             border: none;
                             margin: 0;
-                            padding: 0;
+                            padding: 40px 0;
                             text-align: center;
 
                             @media (min-width: $screen-size-pc) {
-                                width: 700px;
-                                margin: 0 auto;
-                                padding: 80px 68px 50px;
+                                width: 800px;
+                                margin: 50px auto 0;
+                                padding: 50px 170px 50px;
                                 border: 1px solid #d1d1d1;
                             }
 
+                            &:first-of-type {
+                                border-bottom:1px solid #999999;
+
+                                @media (min-width: $screen-size-pc) {
+                                    margin-top:100px;
+                                    border-bottom-color:#d1d1d1;
+                                }
+                            }
+
+                            h3 {
+                                display:block;
+                                font-size:20px;
+                                font-weight:600;
+                                margin:0 0 20px;
+                                color:#333;
+                                text-align:center;
+
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:28px;
+                                }
+
+                                &::before {
+                                    display:inline-block;
+                                    content:"";
+                                    position:relative;
+                                    top:3px;
+                                    width:28px;
+                                    height:28px;
+                                    margin:0 10px 0 0;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        width:34px;
+                                        height:34px;
+                                        top:5px;
+                                    }
+                                }
+
+                                &.sign {
+                                    &::before {
+                                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='26.525' viewBox='0 0 28 26.525'%3E%3Cg transform='translate(-252.521 -275.987)'%3E%3Cpath d='M253.91,302.512a.9.9,0,0,1-.873-1.138l1.617-6.037a.9.9,0,0,1,1.746.468l-1.212,4.525,5.208-1.4a.9.9,0,0,1,.617.054,12.927,12.927,0,0,0,5.509,1.21c6.723,0,12.192-5.025,12.192-11.2s-5.47-11.2-12.192-11.2-12.192,5.025-12.192,11.2a10.343,10.343,0,0,0,.457,3.044.9.9,0,1,1-1.728.531,12.147,12.147,0,0,1-.537-3.575c0-7.173,6.28-13.009,14-13.009s14,5.836,14,13.009-6.28,13.01-14,13.01a14.733,14.733,0,0,1-5.969-1.242l-6.408,1.717A.894.894,0,0,1,253.91,302.512Z' fill='%2339aaa2'/%3E%3Cpath d='M284.36,295.347H273.668a.968.968,0,1,1,0-1.937H284.36a.968.968,0,0,1,0,1.937Z' transform='translate(-12.493 -10.46)' fill='%2339aaa2'/%3E%3Cpath d='M277.951,307.307h-4.283a.968.968,0,1,1,0-1.937h4.283a.968.968,0,0,1,0,1.937Z' transform='translate(-12.224 -17.641)' fill='%2339aaa2'/%3E%3Cpath d='M281.786,319.267h-8.118a.968.968,0,1,1,0-1.937h8.118a.968.968,0,1,1,0,1.937Z' transform='translate(-12.364 -24.821)' fill='%2339aaa2'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                                    }
+                                }
+
+                                &.login {
+                                    &::before {
+                                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='26.525' viewBox='0 0 28 26.525'%3E%3Cg transform='translate(-252.521 -275.987)'%3E%3Cpath d='M253.91,302.512a.9.9,0,0,1-.873-1.138l1.617-6.037a.9.9,0,0,1,1.746.468l-1.212,4.525,5.208-1.4a.9.9,0,0,1,.617.054,12.927,12.927,0,0,0,5.509,1.21c6.723,0,12.192-5.025,12.192-11.2s-5.47-11.2-12.192-11.2-12.192,5.025-12.192,11.2a10.343,10.343,0,0,0,.457,3.044.9.9,0,1,1-1.728.531,12.147,12.147,0,0,1-.537-3.575c0-7.173,6.28-13.009,14-13.009s14,5.836,14,13.009-6.28,13.01-14,13.01a14.733,14.733,0,0,1-5.969-1.242l-6.408,1.717A.894.894,0,0,1,253.91,302.512Z' fill='%232C8CCB'/%3E%3Cpath d='M284.36,295.347H273.668a.968.968,0,1,1,0-1.937H284.36a.968.968,0,0,1,0,1.937Z' transform='translate(-12.493 -10.46)' fill='%232C8CCB'/%3E%3Cpath d='M277.951,307.307h-4.283a.968.968,0,1,1,0-1.937h4.283a.968.968,0,0,1,0,1.937Z' transform='translate(-12.224 -17.641)' fill='%232C8CCB'/%3E%3Cpath d='M281.786,319.267h-8.118a.968.968,0,1,1,0-1.937h8.118a.968.968,0,1,1,0,1.937Z' transform='translate(-12.364 -24.821)' fill='%232C8CCB'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                                    }
+                                }
+                            }
+
+                            div.sign {
+                                position: relative;
+                                margin: 30px 0;
+                                font-size: 16px;
+                                text-align: center;
+                                word-break: keep-all;
+                                padding: 0;
+
+                                @media (min-width: $screen-size-pc) {
+                                    margin: 0;
+                                    font-size: 20px;
+                                }
+
+
+                                a {
+                                    display: block;
+                                    text-align: center;
+                                    background:#39AAA2;
+                                    color: #fff;
+                                    line-height: 54px;
+                                    font-size: 18px;
+                                    font-weight:500;
+                                    margin:0;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size: 18px;
+                                        line-height:66px;
+                                        margin:0;
+                                    }
+                                }
+                            }
                             div.input-outline {
 
                                 position:relative;
@@ -2800,7 +2889,6 @@ body {
                                 padding: 20px 0 30px;
                                 list-style: none;
                                 font-size: 0;
-                                border-bottom:1px solid #ccc;
 
                                 @media (min-width: $screen-size-pc) {
                                     padding:30px 0 40px;
@@ -2837,42 +2925,6 @@ body {
                                 }
                             }
 
-                            div.sign {
-                                position: relative;
-                                margin: 30px 0;
-                                font-size: 16px;
-                                text-align: center;
-                                word-break: keep-all;
-                                padding: 0;
-
-                                @media (min-width: $screen-size-pc) {
-                                    margin: 40px 0;
-                                    font-size: 20px;
-                                }
-
-                                span {
-                                    display: block;
-                                }
-
-                                a {
-                                    display: block;
-                                    text-align: center;
-                                    width: 180px;
-                                    background:#393939;
-                                    color: #fff;
-                                    line-height: 54px;
-                                    font-size: 18px;
-                                    font-weight:500;
-                                    margin:20px auto;
-
-                                    @media (min-width: $screen-size-pc) {
-                                        font-size: 18px;
-                                        width: 180px;
-                                        line-height:66px;
-                                        margin:30px auto;
-                                    }
-                                }
-                            }
                         }
                     }
 

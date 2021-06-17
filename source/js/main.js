@@ -69,14 +69,31 @@ $(function () {
         $('#content').fullpage({
             responsiveWidth: 1200,
             afterLoad: function (anchorLink, index){
+
+                $("#header").removeClass("black");
                 
                 if($(".section.active").attr("data-section-name") === "EVENT") {
 
                     $("#header h1 a").addClass("white");
                 } else {
-
                     $("#header h1 a").removeClass("white");
+                }
 
+                
+                if($(".section.active").attr("data-section-name") === "COMMUNITY") {
+                    $("#header").addClass("black");
+                }
+
+                
+                if($(".section.active").attr("data-section-name") === "CAMPAIGN") {
+
+                    $("#header").addClass("black");
+                }
+
+                
+                if($("footer").hasClass("active")) {
+
+                    $("#header").addClass("black");
                 }
             }
             

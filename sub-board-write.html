@@ -174,97 +174,56 @@
                     </div>
                 </article>
 
-                <article class="board-view-head">
+                <article class="board-write">
                     <div class="container">
-                        <div class="info">
-                            <span>2021-03-30</span>
-                            <span>조회수 : 203</span>
-                        </div>
-                        <h4>2020년도 세계제주인대회조직위원회 기부금 모금액 및 활용실적</h4>
-                    </div>
-                </article>
-
-                <article class="board-view-file">
-                    <div class="container">
-                        <h5>첨부파일</h5>
-
-                        <a href="">연간 기부금 모금액 및 활용실적 명세서-2020(홈페이지 게재).pdf</a>
-                        <a href="">연간 기부금 모금액 및 활용실적 명세서-2020(홈페이지 게재).pdf</a>
-                        <a href="">연간 기부금 모금액 및 활용실적 명세서-2020(홈페이지 게재).pdf</a>
-                    </div>
-                </article>
-
-                <article class="board-view-image">
-                    <div class="container">
-                        <h5 class="sr-only">이미지 뷰</h5>
-
-                        <div class="outline">
-
-                            <img src="source/images/tmp01.jpg" alt="">
-                            <img src="source/images/tmp01.jpg" alt="">
-
-
-                        </div>
-                    </div>
-                </article>
-
-                <article class="board-view-text">
-                    <div class="container">
-
-                        자세한 내용은 첨부파일을 참고해주시기 바랍니다.
-
-
-
-
-
                         
-
-                        <div class="reply-view">
-                            <h5><span>Re:</span> 2020.11.30 10:37</h5>
-                            
-                            <span>
-                                포럼참가신청문의는 조직위원회 사무국 기획전략팀 (T. 064-700-1234)로 유선연락부탁드립니다. 감사합니다.
-                            </span>
-
-                            <div class="tools">
-                                <button>수정</button>
-                                <button>삭제</button>
-                            </div>
-                        </div>
-
-
-
-<!-- 답변입력은 요거
-
-                        <div class="reply-input">
-                            <h5>답변하기</h5>
-                            
-                            <div class="outline">
-                                <textarea placeholder="내용을 입력하주세요."></textarea>
-
-                                <button>등록</button>
-                            </div>
-                        </div>
- -->
-
-
-
-
-
-
-
-
+                        <dl>
+                            <dt>
+                                <label for="board-title">
+                                    제목
+                                </label>
+                            </dt>
+                            <dd>
+                                <input type="text" id="board-title">
+                            </dd>
+                            <dt>
+                                비밀글 설정
+                            </dt>
+                            <dd>
+                                <input type="radio" name="board-secret" id="secret-on">
+                                <label for="secret-on">비밀글</label>
+                                <input type="radio" name="board-secret" id="secret-off">
+                                <label for="secret-off">비밀글 아님</label>
+                            </dd>
+                            <dt class="sr-only">
+                                <label for="board-text">
+                                    본문
+                                </label>
+                            </dt>
+                            <dd>
+                                <textarea></textarea>
+                            </dd>
+                            <dt>
+                                <label for="board-file">
+                                    첨부파일
+                                </label>
+                            </dt>
+                            <dd>
+                                <input type="file" id="board-file">
+                            </dd>
+                        </dl>
                     </div>
                 </article>
 
-
-                <article class="board-view-tools">
+                <article class="board-write-tools">
                     <div class="container">
 
                         <button class="left">이전글</button>
                         <button class="right">다음글</button>
 
-                        <a class="list" href="">목록으로</a>
+                        <a class="btn main" href="">등록</a>
+
+                        <a class="btn" href="">취소</a>
 
                         
                     </div>
@@ -286,7 +245,7 @@
 
         </div>
         <!-- E:mainContent -->
- 
+
    <!-- S:footer -->
    <footer id="footer" class="section fp-auto-height">
 
@@ -318,7 +277,6 @@
     </div>
 </footer>
 <!-- E:footer -->
-
 
 
 

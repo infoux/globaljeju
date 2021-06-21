@@ -839,7 +839,7 @@ body {
         /* MAIN */
         &.main {
 
-            
+
             @media (max-width: $screen-size-pc - 1) {
 	            .fp-section, .fp-tableCell {
                     height: auto !important;
@@ -847,7 +847,7 @@ body {
             }
 
 
-            
+
             div.container-full {
                 padding:100px 20px;
                 z-index:10;
@@ -2626,7 +2626,7 @@ body {
 
                                     @media (min-width: $screen-size-pc) {
                                         display:inline;
-    
+
                                     }
                                 }
                             }
@@ -3181,6 +3181,12 @@ body {
                                 }
                             }
 
+                            &.sub05 {
+                                button {
+                                    border-color:#A8BCE6 !important;
+                                }
+                            }
+
 
                         }
 
@@ -3194,7 +3200,7 @@ body {
                                 width:100%;
                                 margin-left:0;
                                 padding:30px 0 0;
-    
+
                                 div.container {
                                     width:1200px;
 
@@ -3246,7 +3252,7 @@ body {
                                         &.active {
                                             border:2px solid #3494D4;
                                             border-bottom:none;
-                                            color:#3494d4;
+                                            color:#222222;
                                             font-weight:600;
 
                                             &::after {
@@ -3268,7 +3274,7 @@ body {
                                         &.active {
                                             border:2px solid #91DCD2;
                                             border-bottom:none;
-                                            color:#4DAA9E;
+                                            color:#222222;
                                             font-weight:600;
 
                                             &::after {
@@ -3290,7 +3296,7 @@ body {
                                         &.active {
                                             border:2px solid #88C46F;
                                             border-bottom:none;
-                                            color:#4D8934;
+                                            color:#222222;
                                             font-weight:600;
 
                                             &::after {
@@ -3312,7 +3318,7 @@ body {
                                         &.active {
                                             border:2px solid #FFCE48;
                                             border-bottom:none;
-                                            color:#81620F;
+                                            color:#222222;
                                             font-weight:600;
 
                                             &::after {
@@ -3323,6 +3329,29 @@ body {
 
                                 }
                             }
+
+                            &.sub05 {
+                                div.container {
+                                    a {
+                                        &::after {
+                                            background-color:#A8BCE6;
+                                        }
+
+                                        &.active {
+                                            border:2px solid #A8BCE6;
+                                            border-bottom:none;
+                                            color:#222222;
+                                            font-weight:600;
+
+                                            &::after {
+                                                display:none;
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+
 
 
                             &.item2 {
@@ -3394,7 +3423,7 @@ body {
 
 
                             @media (min-width: $screen-size-pc) {
-                            
+
                                 display:inline-block;
                                 position:absolute;
                                 left:50%;
@@ -3402,20 +3431,20 @@ body {
                                 width:900px;
                                 margin-left:-300px;
                                 padding:0;
-        
-        
+
+
                                 div.container {
                                     width:100%;
                                 }
                             }
                         }
                     }
-    
-                            
 
 
 
- 
+
+
+
 
 
                     &.navigation {
@@ -5192,6 +5221,85 @@ body {
 
                     }
 
+                    &.board-info {
+                        background:#F5F7FC;
+                        padding:25px 0;
+                        margin:25px 0;
+
+                        @media (min-width: $screen-size-pc) {
+                            background:#fff;
+                        }
+
+                        div.container {
+
+                            @media (min-width: $screen-size-pc) {
+                                background:#F5F7FC;
+                                padding:35px;
+                                position:relative;
+                            }
+
+                            p {
+                                position:relative;
+                                padding:0 0 0 14px;
+                                margin: 0 0 10px;
+                                color:#3E588D;
+                                font-size:14px;
+                                word-break:keep-all;
+
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:18px;
+                                    padding-right:220px;
+                                }
+                            
+
+                                &::before {
+                                    display:inline-block;
+                                    content:"*";
+                                    position:absolute;
+                                    left:0;
+                                    top:3px;
+                                    word-break:keep-all;
+                                }
+                            }
+
+                            a.write {
+                                display:block;
+                                margin:0 auto;
+                                border:2px solid #7999DC;
+                                background:#fff;
+                                text-align:center;
+                                width:180px;
+                                line-height:50px;
+                                color:#222222;
+                                font-size:17px;
+                                font-weight:600;
+                                
+                                @include drop-shadow($x:0,$y: 6px, $blur: 6px, $spread: 0, $alpha: 0.16);
+
+                                @media (min-width: $screen-size-pc) {
+                                    position:absolute;
+                                    right:35px;
+                                    bottom:55px;
+                                    font-size:20px;
+                                    line-height:56px;
+                                    width:190px;
+                                }
+
+                                &::before {
+                                    display:inline-block;
+                                    position:relative;
+                                    top:4px;
+                                    margin:0 6px 0 0;
+                                    content:"";
+                                    width:20px;
+                                    height:20px;
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.163' height='20.339' viewBox='0 0 21.163 20.339'%3E%3Cg transform='translate(0.5 0.694)'%3E%3Cpath d='M772.029,98.169a2.43,2.43,0,0,1-2.421-2.622l.216-2.712a2.431,2.431,0,0,1,.7-1.525l8.646-8.646a2.68,2.68,0,0,1,3.785,0l2.147,2.147a2.679,2.679,0,0,1,0,3.785l-8.646,8.646a2.433,2.433,0,0,1-1.526.7l-2.712.215C772.158,98.166,772.093,98.169,772.029,98.169Zm9.037-14.6a.983.983,0,0,0-.7.289L771.722,92.5a.739.739,0,0,0-.214.464h0l-.215,2.712a.739.739,0,0,0,.8.8l2.712-.216a.74.74,0,0,0,.464-.214l8.646-8.646a.988.988,0,0,0,0-1.4l-2.147-2.147A.984.984,0,0,0,781.066,83.569Zm-10.4,9.332h0Z' transform='translate(-767.663 -81.881)' fill='%23a8bce6' stroke='%23a8bce6' stroke-width='1'/%3E%3Cpath d='M781.566,149.827H763.093a.845.845,0,0,1,0-1.69h18.474a.845.845,0,1,1,0,1.69Z' transform='translate(-762.248 -130.682)' fill='%23a8bce6' stroke='%23a8bce6' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                                }
+                            
+                            }
+                        }
+                    }
+
                     &.board-list {
                         padding:30px 0 0;
 
@@ -5222,31 +5330,82 @@ body {
                                         @media (min-width: $screen-size-pc) {
                                             position:absolute;
                                             right:30px;
-                                            bottom:30px;
+                                            bottom:22px;
                                         }
 
 
                                         span {
                                             font-size:12px;
+                                            display:inline-block;
+                                            position:relative;
 
                                             @media (min-width: $screen-size-pc) {
                                                 font-size:16px;
+                                                min-width: 64px;
                                             }
 
 
                                             &::after {
                                                 content:"";
-                                                display:inline-block;
+                                                display:block;
+                                                float:right;
                                                 width:1px;
                                                 height:10px;
                                                 background:#333;
-                                                margin:0 10px;
+                                                margin:6px 10px 0;
                                             }
 
                                             &:last-of-type {
                                                 &::after {
                                                     display:none;
                                                 }
+                                            }
+
+                                            &.stat {
+                                                position:absolute;
+                                                right:0;
+                                                bottom:20px;
+
+                                                @media (min-width: $screen-size-pc) {
+                                                    position:static;
+                                                }
+    
+                                                &::after {
+                                                    display:none;
+
+                                                    @media (min-width: $screen-size-pc) {
+                                                        display:inline-block;
+                                                        margin:13px 16px;
+                                                    }
+                                                }
+
+                                                strong {
+                                                    display:inline-block;
+                                                    color:#fff;
+                                                    width:70px;
+                                                    text-align:center;
+                                                    border-radius:2px;
+                                                    line-height:30px;
+                                                    font-weight:400;
+                                                    font-size:14px;
+
+                                                    @media (min-width: $screen-size-pc) {
+                                                        width:96px;
+                                                        line-height:36px;
+                                                        font-size:16px;
+                                                    }
+    
+                                                    &.wait {
+                                                        background:#888;
+                                                        border:1px solid #777;
+                                                    }
+
+                                                    &.ok {
+                                                        background:#7A96E3;
+                                                        border:1px solid #5977BA;
+                                                    }
+                                                }
+
                                             }
 
                                         }
@@ -5260,9 +5419,11 @@ body {
                                         white-space:nowrap;
                                         text-overflow:ellipsis;
                                         overflow:hidden;
+                                        padding:0 100px 0 0;
 
                                         @media (min-width: $screen-size-pc) {
                                             font-size:20px;
+                                            padding:0 260px 0 0;
                                         }
 
                                         small {
@@ -5274,6 +5435,80 @@ body {
                                                 font-weight:400;
                                                 width:90px;
                                             }
+                                        }
+
+
+
+                                        span.outlink {
+                                            position:relative;
+                                            font-size:0;
+
+                                            &::after {
+                                                content:"";
+                                                display:inline-block;
+                                                position:absolute;
+                                                left:0;
+                                                top:-14px;
+                                                width:15.55px;
+                                                height:15.55px;
+                                                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.554' height='15.554' viewBox='0 0 15.554 15.554'%3E%3Cpath d='M1790.61,516.308v2.148h-9.671v-9.671h2.47l-.036-1.307h-3.087a.653.653,0,0,0-.653.653v10.978a.653.653,0,0,0,.653.653h10.978a.654.654,0,0,0,.653-.653v-2.693Z' transform='translate(-1779.632 -504.209)' fill='%23bbcecb'/%3E%3Cpath d='M1807.219,491.522h-10.978a.653.653,0,0,0-.653.653v10.978a.653.653,0,0,0,.653.653h10.978a.653.653,0,0,0,.653-.653V492.175A.653.653,0,0,0,1807.219,491.522Zm-.653,10.978h-9.671v-9.671h9.671Z' transform='translate(-1792.319 -491.522)' fill='%2377c5bb'/%3E%3C/svg%3E%0A") no-repeat center / 100%;
+                                                margin-left:10px;
+
+                                                @media (min-width: $screen-size-pc) {
+                                                    width:26px;
+                                                    height:26px;
+                                                    top:-20px;
+                                                }
+
+                                            }
+                                        }
+
+                                        span.file {
+                                            position:relative;
+                                            font-size:0;
+
+                                            &::after {
+                                                content:"";
+                                                display:inline-block;
+                                                position:absolute;
+                                                left:0;
+                                                top:-14px;
+                                                width:20px;
+                                                height:20px;
+                                                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg transform='translate(-1366.086 -919.086)'%3E%3Ccircle cx='10' cy='10' r='10' transform='translate(1366.086 919.086)' fill='%23e8e8e8'/%3E%3Cpath d='M104.76,747.443a3.662,3.662,0,0,1-2.6-1.083L97.7,741.881a2.718,2.718,0,0,1,0-3.825,2.683,2.683,0,0,1,3.8,0l4.281,4.3a1.662,1.662,0,0,1-2.344,2.357L99.848,741.1l.614-.617,3.595,3.614a.792.792,0,0,0,1.117-1.123l-4.281-4.3a1.817,1.817,0,0,0-2.576,0,1.841,1.841,0,0,0,0,2.591l4.454,4.478a2.824,2.824,0,0,0,3.982-4l-4.294-4.318.614-.617,4.294,4.318a3.722,3.722,0,0,1,0,5.238A3.662,3.662,0,0,1,104.76,747.443Z' transform='translate(1273.599 186.766)' fill='%23555'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center;
+
+                                                margin-left:10px;
+
+                                                @media (min-width: $screen-size-pc) {
+                                                    width:28px;
+                                                    height:28px;
+                                                    top:-20px;
+                                                }
+
+                                            }
+                                        }
+
+                                        span.lock {
+                                            position:relative;
+                                            font-size:0;
+
+                                            &::after {
+                                                content:"";
+                                                display:inline-block;
+                                                position:relative;
+                                                width:16px;
+                                                height:16px;
+                                                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.38' height='24.462' viewBox='0 0 19.38 24.462'%3E%3Cg transform='translate(-3051.743 -4384.396)'%3E%3Cpath d='M3067.965,4391.956h-1.329V4390a5.2,5.2,0,0,0-10.406,0v1.958H3054.9a2.761,2.761,0,0,0-2.758,2.757V4405.7a2.761,2.761,0,0,0,2.758,2.758h13.064a2.761,2.761,0,0,0,2.758-2.758v-10.986A2.761,2.761,0,0,0,3067.965,4391.956ZM3057.18,4390a4.253,4.253,0,1,1,8.505,0v1.958h-8.505Zm12.593,15.7a1.81,1.81,0,0,1-1.808,1.808H3054.9a1.81,1.81,0,0,1-1.808-1.808v-10.986a1.81,1.81,0,0,1,1.808-1.807h13.064a1.81,1.81,0,0,1,1.808,1.807Z' fill='%23879fd1' stroke='%23879fd1' stroke-width='0.8'/%3E%3Cpath d='M3154.791,4555.565a2.538,2.538,0,0,0-.718,4.974v2.771a.719.719,0,1,0,1.437,0v-2.771a2.538,2.538,0,0,0-.719-4.974Zm0,3.652a1.107,1.107,0,1,1,1.107-1.107A1.11,1.11,0,0,1,3154.791,4559.218Z' transform='translate(-93.358 -159.227)' fill='%23879fd1' stroke='%23879fd1' stroke-width='0.8'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / auto 100%;
+
+                                                margin-right:6px;
+
+                                                @media (min-width: $screen-size-pc) {
+                                                    width:24px;
+                                                    height:24px;
+                                                    top:4px;
+                                                }
+                                            }
+
                                         }
                                     }
 
@@ -5453,7 +5688,7 @@ body {
                                     left:auto;
                                     right:0;
                                     top:100px;
-                                    transform:unset;
+                                    transform:none;
                                 }
 
 
@@ -5809,7 +6044,7 @@ body {
                                     img {
                                         display:none;
                                     }
-    
+
                                 }
                                 p.text {
                                     margin:20px 0 0;
@@ -5953,6 +6188,15 @@ body {
 
                             }
 
+                        }
+
+                        &.sub05 {
+                            fieldset.search {
+                                button {
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.525' height='21.376' viewBox='0 0 21.525 21.376'%3E%3Cg transform='translate(-1232.736 -3139.667)'%3E%3Cpath  d='M1254.007,3159.566h0l-4.54-4.54a9.454,9.454,0,1,0-1.21,1.236l4.526,4.527a.865.865,0,0,0,1.224-1.223Zm-11.849-2.785a7.692,7.692,0,1,1,7.691-7.692A7.7,7.7,0,0,1,1242.158,3156.782Z' fill='%239CB6EC'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 94% auto;
+
+                                }
+                            }
                         }
                     }
 
@@ -6146,11 +6390,159 @@ body {
                                 }
 
                             }
+
+                            p {
+                                margin:0 0 4px 0;
+                            }
+
+                            div.reply-input {
+                                background:#FAFAFA;
+                                margin:40px 0 -30px;
+                                padding:20px;
+
+                                @media (min-width: $screen-size-pc) {
+                                    margin:50px 0 -60px;
+                                }
+
+                                h5 {
+                                    margin:0 0 10px;
+                                    font-size:15px;
+                                    font-weight:500;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size:18px;
+                                    }
+    
+                                }
+
+                                div.outline {
+                                    position:relative;
+                                    border:1px solid #CCCCCC;
+                                    background:#fff;
+                                    padding:0 0 60px;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        padding:0 180px 0 0;
+                                    }
+
+                                    textarea {
+                                        border:none;
+                                        width:100%;
+                                        padding:10px;
+                                        font-size:16px;
+                                        height:90px;
+                                        outline:none;
+                                        resize:none;
+                                    }
+
+                                    button {
+                                        position:absolute;
+                                        right:10px;
+                                        bottom:10px;
+                                        width:130px;
+                                        height:42px;
+                                        border:1px solid #4F6BAA;
+                                        background:#fff;
+                                        color:#4F6BAA;
+                                        font-size:15px;
+                                        font-weight:500px;
+
+                                        @media (min-width: $screen-size-pc) {
+                                            font-size:18px;
+                                            width:140px;
+                                            height:50px;
+                                        }
+
+                                    }
+
+                                }
+                            }
+
+                            div.reply-view {
+                                position:relative;
+                                background:#F6F6F6;
+                                border-top:1px solid #DFDFDF;
+                                margin:40px 0 -30px;
+                                padding:20px;
+
+                                @media (min-width: $screen-size-pc) {
+                                    padding:34px;
+                                    margin:50px 0 -60px;
+                                }
+
+
+                                h5 {
+                                    margin:0 0 10px;
+                                    font-size:15px;
+                                    color:#555;
+                                    font-weight:400;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size:18px;
+                                        margin:0 0 16px;
+                                    }
+
+                                    span {
+                                        display:inline-block;
+                                        color:#fff;
+                                        background:#8FABE3;
+                                        border:1px solid #7F9AD1;
+                                        line-height:28px;
+                                        padding:0 15px;
+                                        border-radius:28px;
+                                        margin-right:8px;
+
+                                        @media (min-width: $screen-size-pc) {
+                                            line-height:34px;
+                                        }
+                                    }
+                                }
+
+                                &>span {
+                                    font-size:16px;
+                                    font-weight:500;
+                                    word-break:keep-all;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size:18px;
+                                    }
+
+                                }
+
+                                div.tools {
+                                    position:absolute;
+                                    right:10px;
+                                    top:20px;
+                                    font-size:0;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        right:20px;
+                                        top:34px;
+                                    }
+
+                                    button {
+                                        font-size:15px;
+                                        color:#555;
+                                        border:none;
+                                        margin:0;
+                                        padding:0 10px;
+                                        line-height:1;
+                                        background:transparent;
+
+                                        &:first-of-type {
+                                            border-right:1px solid #999;
+                                        }
+    
+
+                                    }
+
+                                }
+                            }
                         }
                     }
 
                     &.board-view-tools {
-                        padding:0 0 50px;
+                        padding:20px 0 50px;
 
                         div.container {
                             text-align:center;
@@ -6218,6 +6610,176 @@ body {
                                 height:74px;
                                 background-size:30px auto;
                             }
+                        }
+                    }
+
+                    &.board-write {
+                        padding:20px 0 0;
+
+                        dl {
+
+                            dt {
+                                background:#F1F5F8;
+                                border:1px solid #CCCCCC;
+                                border-bottom:none;
+                                line-height:34px;
+                                padding:0 10px;
+                                font-size:16px;
+                                color:#333;
+                                font-weight:500;
+
+
+                                @media (min-width: $screen-size-pc) {
+                                    position:relative;
+                                    top:1px;
+                                    font-size:18px;
+                                    line-height:64px;
+                                    float:left;
+                                    width:180px;
+                                    border:none;
+                                    border-left:1px solid #CCCCCC;
+                                    text-align:center;
+
+                                    &:last-of-type {
+                                        line-height:63px;
+                                    }
+                                }
+                            }
+                            
+                            dd {
+                                margin:0;
+                                border:1px solid #CCCCCC;
+                                border-top:none;
+                                padding:6px;
+
+
+                                @media (min-width: $screen-size-pc) {
+                                    padding:10px 10px 10px 190px;
+                                    min-height:65px;
+                                    border:1px solid #CCCCCC;
+                                    border-left:none;
+                                    border-bottom:none;
+
+                                    &:last-of-type {
+                                        border-bottom:1px solid #ccc;
+                                    }
+                                }
+
+                                input[type="text"] {
+                                    width:100%;
+                                    border: 1px solid #ccc;
+                                    height:38px;
+                                    padding:0 10px;
+
+
+                                    @media (min-width: $screen-size-pc) {
+                                        height:44px;
+                                    }
+                                }
+
+                                input[type="radio"] {
+                                    position:relative;
+                                    margin:0 0 0 10px;
+
+
+                                    @media (min-width: $screen-size-pc) {
+                                        top:5px;
+                                        width:24px;
+                                        height:24px;
+                                    }
+                                }
+
+                                label {
+                                    line-height:38px;
+                                    margin: 0 20px 0 4px;
+                                    color:#555555;
+                                    font-weight:500;
+
+
+                                    @media (min-width: $screen-size-pc) {
+                                        font-size:18px;
+                                    }
+                                }
+
+                                textarea {
+                                    width:100%;
+                                    min-height:266px;
+                                    padding:10px;
+                                    border:1px solid #ccc;
+
+
+                                    @media (min-width: $screen-size-pc) {
+                                        min-height:584px;
+                                    }
+                                }
+                            }
+
+                            dd + dt {
+                                border-top:none;
+                            }
+
+                            dt.sr-only + dd {
+                                padding:10px;
+                                border-left:1px solid #ccc;
+                            }
+                            
+                        }
+                    }
+
+                    &.board-write-tools {
+                        padding:20px 0 50px;
+
+                        div.container {
+                            text-align:center;
+
+                            button {
+                                margin:0;
+                                padding:0;
+                                width:12px;
+                                height:22px;
+                                position:absolute;
+                                top:50%;
+                                transform:translateY(-50%);
+                                border:none;
+                                font-size:0;
+
+
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:20px;
+                                    width:auto;
+                                    height:auto;
+                                }
+
+                                &.left {
+                                    left:15px;
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.167' height='22.964' viewBox='0 0 14.167 22.964'%3E%3Cpath d='M0,21.474,12,10.737,0,0' transform='translate(13.5 22.219) rotate(180)' fill='none' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+
+
+                                    @media (min-width: $screen-size-pc) {
+                                        left:0;
+                                        background-size:12px 22px;
+                                        background-position:left center;
+                                        padding-left:24px;
+                                    }
+
+                                }
+
+                                &.right {
+                                    right:15px;
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.167' height='22.964' viewBox='0 0 14.167 22.964'%3E%3Cpath d='M0,21.474,12,10.737,0,0' transform='translate(0.667 0.745)' fill='none' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+
+
+                                    @media (min-width: $screen-size-pc) {
+                                        right:0;
+                                        background-size:12px 22px;
+                                        background-position:right center;
+                                        padding-right:24px;
+                                    }
+                                }
+                            }
+                        }
+
+                        a {
                         }
                     }
 
@@ -6547,7 +7109,7 @@ body {
                         background:url(../images/bg-greeting.png) no-repeat center bottom / 100% auto;
 
                         div.container {
-                            
+
                             p {
                                 margin:0 0 20px;
                                 font-size:16px;
@@ -6623,9 +7185,9 @@ body {
 
                                 @media (min-width: $screen-size-pc) {
                                     display:none;
-        
+
                                 }
-                                
+
                             }
 
                             div.outline {
@@ -6636,15 +7198,16 @@ body {
                                 height:142px;
 
 
-                                @media (min-width: $screen-size-pc) {
+                                @media (min-width: $screen-size-pc) {;
+
                                     overflow:unset;
                                     height:auto;
                                     position:absolute;
                                     left:0;
                                     top:0;
-        
+
                                 }
-                            
+
                                 button {
                                     border:none;
                                     position:relative;
@@ -6663,13 +7226,13 @@ body {
                                         height:auto;
                                         padding:20px 0;
                                         width:220px;
-            
+
                                     }
-    
+
                                     span {
                                         display:block;
                                     }
-    
+
                                     &::after {
                                         content:"";
                                         position:absolute;
@@ -6688,17 +7251,17 @@ body {
                                             left:0;
                                             right:0;
                                             top:0;
-                
+
                                         }
-                                        
+
                                     }
-    
+
                                     &:first-of-type {
                                         &::after {
                                             display:none;
                                         }
                                     }
-    
+
                                     &.active {
                                         font-size:28px;
                                         z-index:2;
@@ -6710,9 +7273,9 @@ body {
                                         @media (min-width: $screen-size-pc) {
                                             height:200px;
                                             font-size:50px;
-                
+
                                         }
-    
+
                                         &::before {
                                             content:"";
                                             position:absolute;
@@ -6733,17 +7296,17 @@ body {
                                                 transform:translateY(50%);
                                                 border-top-color:transparent;
                                                 border-left-color:#FFCE48;
-                    
+
                                             }
-    
+
                                         }
-    
+
                                         &::after {
                                             display:none;
                                         }
-    
+
                                         + button {
-    
+
                                             &::after {
                                                 display:none;
                                             }
@@ -6821,7 +7384,7 @@ body {
                                             padding:0 0 40px;
                                             margin-left:100px;
                                         }
-                                        
+
                                         ul {
                                             list-style:none;
                                             margin:0;
@@ -6849,7 +7412,7 @@ body {
                         padding:30px 0;
 
                         div.container {
-                            
+
                             div#map {
                                 margin:0 -15px;
                                 height:320px;
@@ -6858,7 +7421,7 @@ body {
                                 @media (min-width: $screen-size-pc) {
                                     height:640px;
                                     margin:0;
-        
+
                                 }
                             }
 
@@ -6881,9 +7444,9 @@ body {
                                         display:inline-block;
                                         vertical-align:top;
                                         width:calc((100% - 1px) / 3);
-            
+
                                     }
-                                    
+
                                     &::after {
                                         content:"";
                                         display:block;
@@ -6903,7 +7466,7 @@ body {
                                             width:1px;
                                             height:80px;
                                             bottom:50%;
-                
+
                                         }
                                     }
 
@@ -6921,7 +7484,7 @@ body {
 
                                         @media (min-width: $screen-size-pc) {
                                             font-size:24px;
-                
+
                                         }
 
                                         &::before {
@@ -6937,7 +7500,7 @@ body {
                                                 top:0;
                                                 margin:0 auto 10px;
 
-                    
+
                                             }
                                         }
                                     }
@@ -6950,7 +7513,7 @@ body {
 
                                         @media (min-width: $screen-size-pc) {
                                             font-size:20px;
-                
+
                                         }
 
                                         span {
@@ -6969,9 +7532,9 @@ body {
                                                 @media (min-width: $screen-size-pc) {
                                                     width:44px;
                                                     height:43.1px;
-                        
+
                                                 }
-        
+
                                             }
                                         }
                                     }
@@ -6983,11 +7546,11 @@ body {
                                                 height:25px;
                                                 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26.798' height='26.798' viewBox='0 0 26.798 26.798'%3E%3Cpath d='M454.245,575.4a17.2,17.2,0,0,1-6.167-1.99l-3.882,3.882-6.877-6.876,3.882-3.882a17.2,17.2,0,0,1-1.99-6.167h-9.744c-.009.27-.02.539-.02.811a23.987,23.987,0,0,0,23.987,23.987c.272,0,.541-.011.811-.02Z' transform='translate(-428.447 -559.362)' fill='%23ffd76c' stroke='%23444' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
 
-                                                
+
                                                 @media (min-width: $screen-size-pc) {
                                                     width:43.1px;
                                                     height:43.1px;
-                        
+
                                                 }
                                             }
                                         }
@@ -7003,12 +7566,12 @@ body {
                                                 @media (min-width: $screen-size-pc) {
                                                     width:44px;
                                                     height:43.1px;
-                        
+
                                                 }
                                             }
                                         }
                                     }
-                                    
+
                                 }
                             }
 
@@ -7034,8 +7597,8 @@ body {
                                         @media (min-width: $screen-size-pc) {
                                             display:none;
                                         }
-                        
-                                        
+
+
                                     }
                                     &.pc {
                                         display:none;
@@ -7051,7 +7614,7 @@ body {
                         }
                     }
 
-                    
+
 
                     &.organization-list {
                         padding:20px 0;

@@ -1802,7 +1802,7 @@ body nav#main-menu::before {
 
 body nav#main-menu h2 {
   font-size: 0;
-  margin: 0;
+  margin: 0 0 10px;
   width: 74px;
   height: 52px;
   background: url("../images/logo.png") no-repeat center/100% auto;
@@ -1812,6 +1812,7 @@ body nav#main-menu h2 {
   body nav#main-menu h2 {
     width: 113px;
     height: 78px;
+    margin: 0 0 20px;
   }
 }
 
@@ -1846,8 +1847,7 @@ body nav#main-menu div.buttons a {
   position: relative;
   font-size: 18px;
   font-weight: 700;
-  line-height: 52px;
-  padding: 0 20px;
+  padding: 10px 20px;
   border: 4px solid #ccc;
   margin: 0 0 16px;
   color: #000;
@@ -1856,7 +1856,7 @@ body nav#main-menu div.buttons a {
 @media (min-width: 1200px) {
   body nav#main-menu div.buttons a {
     font-size: 26px;
-    line-height: 92px;
+    padding: 28px 20px;
     display: inline-block;
     width: 340px;
     margin-right: 14px;
@@ -1894,7 +1894,7 @@ body nav#main-menu div.menus {
 
 @media (min-width: 1200px) {
   body nav#main-menu div.menus {
-    margin: 39px 0 55px;
+    margin: 39px 238px 55px 0;
   }
 }
 
@@ -2257,7 +2257,8 @@ body div#content.main section.event .container-full h3 {
 @media (min-width: 1200px) {
   body div#content.main section.event .container-full h3 {
     font-size: 62px;
-    margin: 0 0 94px;
+    margin: 0 0 160px;
+    padding-right: 570px;
   }
 }
 
@@ -2281,6 +2282,15 @@ body div#content.main section.event .container-full h3 small span {
 @media (min-width: 1200px) {
   body div#content.main section.event .container-full h3 small span {
     display: inline;
+  }
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.event .container-full h3.en {
+    font-size: 52px;
+  }
+  body div#content.main section.event .container-full h3.en small {
+    font-size: 28px;
   }
 }
 
@@ -2356,11 +2366,12 @@ body div#content.main section.event .container-full div.buttons {
 body div#content.main section.event .container-full div.buttons a {
   display: block;
   position: relative;
+  vertical-align: top;
   font-size: 22px;
   font-weight: 500;
   color: #fff;
+  padding: 20px 20px 20px 70px;
   text-align: center;
-  line-height: 70px;
 }
 
 @media (min-width: 1200px) {
@@ -2369,9 +2380,8 @@ body div#content.main section.event .container-full div.buttons a {
     width: calc((100% - 31px) / 3);
     -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
-    line-height: 120px;
     margin-right: 15px;
-    padding-left: 90px;
+    padding: 45px 30px 45px 70px;
   }
   body div#content.main section.event .container-full div.buttons a:last-of-type {
     margin-right: 0;
@@ -2382,8 +2392,7 @@ body div#content.main section.event .container-full div.buttons a::before {
   content: "";
   display: block;
   position: absolute;
-  left: 50%;
-  margin-left: -126px;
+  left: 20px;
   top: 13px;
   width: 40px;
   height: 40px;
@@ -2393,8 +2402,8 @@ body div#content.main section.event .container-full div.buttons a::before {
   body div#content.main section.event .container-full div.buttons a::before {
     width: 54px;
     height: 54px;
+    left: 20px;
     top: 28px;
-    left: 90px;
     margin: 0;
   }
 }
@@ -2452,51 +2461,70 @@ body div#content.main section.event .container-full div.buttons a.btn03::after {
 }
 
 body div#content.main section.event .container-full div.mov-layer {
-  display: none;
+  position: absolute;
+  background: #DCDCDC;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 320px;
+  height: 200px;
 }
 
 @media (min-width: 1200px) {
   body div#content.main section.event .container-full div.mov-layer {
-    display: block;
-    position: absolute;
+    left: auto;
     right: 0;
-    bottom: 180px;
+    bottom: 300px;
     width: 560px;
     font-size: 0;
-    background: #DCDCDC;
+    -webkit-transform: none;
+            transform: none;
   }
+}
+
+body div#content.main section.event .container-full div.mov-layer iframe {
+  width: 320px;
+  height: 200px;
+  border: 7px solid #0082D2;
+  background: #000;
+}
+
+@media (min-width: 1200px) {
   body div#content.main section.event .container-full div.mov-layer iframe {
     width: 560px;
     height: 306px;
-    border: 7px solid #0082D2;
-    background: #000;
   }
-  body div#content.main section.event .container-full div.mov-layer div.tools {
-    padding: 18px;
-    font-size: 16px;
-  }
-  body div#content.main section.event .container-full div.mov-layer div.tools input {
-    width: 22px;
-    height: 22px;
-    vertical-align: bottom;
-  }
-  body div#content.main section.event .container-full div.mov-layer div.tools label {
-    display: inline-block;
-    vertical-align: bottom;
-    font-weight: 500;
-    color: #555555;
-    padding: 0 0 0 6px;
-  }
-  body div#content.main section.event .container-full div.mov-layer div.tools button {
-    float: right;
-    border: none;
-    background: none;
-    color: #555555;
-  }
-  body div#content.main section.event .container-full div.mov-layer div.tools button i {
-    font-size: 22px;
-    vertical-align: bottom;
-  }
+}
+
+body div#content.main section.event .container-full div.mov-layer div.tools {
+  padding: 18px;
+  font-size: 16px;
+}
+
+body div#content.main section.event .container-full div.mov-layer div.tools input {
+  width: 22px;
+  height: 22px;
+  vertical-align: bottom;
+}
+
+body div#content.main section.event .container-full div.mov-layer div.tools label {
+  display: inline-block;
+  vertical-align: bottom;
+  font-weight: 500;
+  color: #555555;
+  padding: 0 0 0 6px;
+}
+
+body div#content.main section.event .container-full div.mov-layer div.tools button {
+  float: right;
+  border: none;
+  background: none;
+  color: #555555;
+}
+
+body div#content.main section.event .container-full div.mov-layer div.tools button i {
+  font-size: 22px;
+  vertical-align: bottom;
 }
 
 body div#content.main section.main {
@@ -2747,7 +2775,7 @@ body div#content.main section.main div.links a:nth-of-type(3)::before {
 }
 
 body div#content.main section.main div.links a:nth-of-type(4)::before {
-  background: url(../images/icon-link04.svg) no-repeat #404040 center/60% auto;
+  background: url(../images/icon-link05.svg) no-repeat #404040 center/60% auto;
 }
 
 @media (min-width: 1200px) {
@@ -3500,7 +3528,7 @@ body div#content.sub div.sub-head nav.sub-menu::before {
     width: 32px;
     height: 32px;
     background-position: center 12px;
-    margin-left: 80px;
+    margin-left: 100px;
   }
 }
 
@@ -5257,6 +5285,19 @@ body div#content.sub div.content-box article.event-program-list ul.list li a h5 
   }
 }
 
+body div#content.sub div.content-box article.event-program-list ul.list li a h5 small span {
+  display: inline-block;
+  font-weight: 400;
+  padding: 0 0 0 10px;
+  color: #555;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-list ul.list li a h5 small span {
+    font-size: 18px;
+  }
+}
+
 body div#content.sub div.content-box article.event-program-list ul.list li a p.name {
   margin: 0;
   font-size: 13px;
@@ -5274,6 +5315,200 @@ body div#content.sub div.content-box article.event-program-list ul.list li a p.n
 
 body div#content.sub div.content-box article.event-program-list ul.list li:last-of-type a {
   margin: 0 0 20px;
+}
+
+body div#content.sub div.content-box article.event-program-2021-text {
+  padding: 0;
+}
+
+body div#content.sub div.content-box article.event-program-2021-text div.container {
+  padding: 150px 20px 20px;
+  word-break: keep-all;
+  line-height: 1.6;
+  background: url(../images/event-2021.svg) no-repeat #F6F6F6 center top 20px/148px auto;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-text div.container {
+    background-size: 334px;
+    background-position: right 50px top 50px;
+    padding: 50px 360px 50px 50px;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-text div.container h4 {
+  font-size: 19px;
+  text-align: center;
+  margin: 0 0 25px;
+  font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-text div.container h4 {
+    text-align: left;
+    font-size: 30px;
+  }
+  body div#content.sub div.content-box article.event-program-2021-text div.container h4 span {
+    display: block;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-text div.container p {
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-text div.container p {
+    font-size: 20px;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-text div.container p span {
+  display: block;
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail {
+  padding: 30px 0;
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container > strong {
+  display: block;
+  font-size: 20px;
+  color: #3494D4;
+  font-weight: 600;
+  margin: 30px 0 20px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container > strong {
+    font-size: 30px;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container > strong span {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container > strong span {
+    display: inline;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.section {
+  border-bottom: 1px dotted #999999;
+  padding: 30px 0;
+  word-break: keep-all;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container div.section {
+    padding: 50px 0;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.section h4 {
+  position: relative;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 500;
+  padding: 0 0 0 32px;
+  margin: 0 0 10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container div.section h4 {
+    font-size: 26px;
+    padding: 0 0 0 60px;
+    margin: 0 0 20px;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.section h4::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 25px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='27.066' viewBox='0 0 28 27.066'%3E%3Cg transform='translate(-836.024 -667.629)'%3E%3Cg transform='translate(844.122 678.748)'%3E%3Cpath d='M864.773,706.142a1.107,1.107,0,1,0-1.106,1.107A1.107,1.107,0,0,0,864.773,706.142Z' transform='translate(-862.56 -705.035)' fill='%23545454'/%3E%3Cpath d='M882.027,706.142a1.107,1.107,0,1,0-1.107,1.107A1.107,1.107,0,0,0,882.027,706.142Z' transform='translate(-875.018 -705.035)' fill='%23545454'/%3E%3Cpath d='M899.28,706.142a1.107,1.107,0,1,0-1.107,1.107A1.107,1.107,0,0,0,899.28,706.142Z' transform='translate(-887.476 -705.035)' fill='%23545454'/%3E%3C/g%3E%3Cg transform='translate(837.024 668.629)'%3E%3Cg transform='translate(0 1.599)'%3E%3Cpath d='M860.009,675.194a4.99,4.99,0,0,1,.191,1.356v11.225a2.379,2.379,0,0,1-2.378,2.379H839.2a5,5,0,0,1-1.489-.225,5,5,0,0,0,4.809,3.643h10.9l4.863,4.863v-4.863h.237a5,5,0,0,0,5-5v-8.6A5,5,0,0,0,860.009,675.194Z' transform='translate(-837.521 -674.969)' fill='%23e6decd'/%3E%3Cpath d='M858.024,674.383h-16a5,5,0,0,0-5,5v8.6a5,5,0,0,0,5,5h10.9l4.863,4.863v-4.863h.237a5,5,0,0,0,5-5v-8.6A5,5,0,0,0,858.024,674.383Z' transform='translate(-837.024 -674.383)' fill='none' stroke='%23545454' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3Cg transform='translate(14.641)'%3E%3Cg %3E%3Crect width='4.085' height='4.085' fill='%2374c8ff' stroke='%2374c8ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath d='M900.9,683.325v.882a4.357,4.357,0,0,1-1.276,3.081l-.067.067' transform='translate(-896.819 -679.24)' fill='none' stroke='%2374c8ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3Cg transform='translate(6.772)'%3E%3Crect width='4.085' height='4.085' fill='%2374c8ff' stroke='%2374c8ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath d='M925.268,683.325v.882a4.357,4.357,0,0,1-1.276,3.081l-.067.067' transform='translate(-921.183 -679.24)' fill='none' stroke='%2374c8ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/100% auto;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container div.section h4::before {
+    width: 45px;
+    height: 43.5px;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.section p.text {
+  font-size: 15px;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container div.section p.text {
+    font-size: 20px;
+    padding: 0 0 0 60px;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.section p.text span {
+  display: block;
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.section p.text strong {
+  color: #207FB2;
+  font-weight: 500;
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.section div.image {
+  width: 335px;
+  height: 65px;
+  margin: 20px auto 0;
+  font-size: 0;
+  background: url(../images/event-2021-step-mobile.svg) no-repeat center/100% auto;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container div.section div.image {
+    width: 999px;
+    height: 80px;
+    background: url(../images/event-2021-step.svg) no-repeat center/100% auto;
+    margin: 40px auto 0;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.button-set {
+  text-align: center;
+  padding: 30px 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container div.button-set {
+    padding: 50px 0;
+  }
+}
+
+body div#content.sub div.content-box article.event-program-2021-detail div.container div.button-set a {
+  display: block;
+  margin: 0 auto 18px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  width: 240px;
+  line-height: 60px;
+  background: #2C4988;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub div.content-box article.event-program-2021-detail div.container div.button-set a {
+    display: inline-block;
+    width: 300px;
+    line-height: 100px;
+    font-size: 28px;
+    margin: 0 20px 0 0;
+  }
 }
 
 body div#content.sub div.content-box article.event-empty {
@@ -7250,10 +7485,6 @@ body div#content.sub div.content-box article.photo-view div.container div.big {
 
 @media (min-width: 1200px) {
   body div#content.sub div.content-box article.photo-view div.container div.big {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    width: calc(100% - 371px);
     padding: 50px 30px;
   }
 }
@@ -7310,18 +7541,6 @@ body div#content.sub div.content-box article.photo-view div.container ul {
   overflow-x: scroll;
 }
 
-@media (min-width: 1200px) {
-  body div#content.sub div.content-box article.photo-view div.container ul {
-    vertical-align: top;
-    width: 370px;
-    margin: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    min-height: 800px;
-    max-height: 880px;
-  }
-}
-
 body div#content.sub div.content-box article.photo-view div.container ul li {
   display: inline-block;
   width: 100px;
@@ -7332,9 +7551,7 @@ body div#content.sub div.content-box article.photo-view div.container ul li {
 
 @media (min-width: 1200px) {
   body div#content.sub div.content-box article.photo-view div.container ul li {
-    display: block;
-    margin: 0 0 20px 0;
-    width: auto;
+    width: 150px;
   }
 }
 
